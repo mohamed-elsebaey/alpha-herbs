@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 function AboutUs() {
   return (
@@ -11,15 +12,19 @@ function AboutUs() {
             <div className="-mx-3 flex items-center sm:-mx-4">
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="py-3 sm:py-4">
-                  <img
-                    src="../images/about/image1.jpg"
+                  <Image
+                    width={350}
+                    height={350}
+                    src="/images/about/image1.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
                 </div>
                 <div className="py-3 sm:py-4">
-                  <img
-                    src="../images/about/image2.jpg"
+                  <Image
+                    width={350}
+                    height={350}
+                    src="/images/about/image2.jpg"
                     alt=""
                     className="w-full rounded-2xl"
                   />
@@ -27,11 +32,12 @@ function AboutUs() {
               </div>
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="relative z-10 my-4">
-                  <img
-                    src="../images/about/image3.jpg"
+                  <Image
+                    width={350}
+                    height={350}
+                    src="/images/about/image3.jpg"
                     alt=""
                     className="w-full rounded-2xl"
-                    height={200}
                   />
                   <span className="absolute -bottom-7 -right-7 z-[-1]">
                     <svg
@@ -613,27 +619,26 @@ function AboutUs() {
                 About US
               </span>
               <h2 className="text-3xl font-bold text-primary/90 sm:text-[40px]/[48px] ">
-                Alpha Herbs:<br/>
+                Alpha Herbs:
+                <br />
               </h2>
               <h2 className="mb-5 text-xl font-semibold text-primary/90 sm:text-[40px]/[48px] ">
                 Organic Farming for a Healthier World.
               </h2>
               <p className="mb-5 text-base text-secondary">
-                <strong>Alpha Herbs</strong> is an
-                Egyptian agricultural company established in
-                <strong>2018</strong> with a passion
-                for organic farming. Our
-                <strong> 630-hectare</strong> farm in
-                Farafra, New Valley Governorate, serves as our laboratory for
-                cultivating products that are in harmony with nature and
-                beneficial to human health.
+                <strong>Alpha Herbs</strong> is an Egyptian agricultural company
+                established in
+                <strong>2018</strong> with a passion for organic farming. Our
+                <strong> 630-hectare</strong> farm in Farafra, New Valley
+                Governorate, serves as our laboratory for cultivating products
+                that are in harmony with nature and beneficial to human health.
               </p>
               <p className="mb-8 text-base text-secondary">
                 We believe that organic farming is the future of agriculture. It
                 is a way of producing food that is not only healthier but also
-                more sustainable. By choosing <strong>Alpha Herbs</strong>, you are supporting a
-                company that is dedicated to making a positive impact on the
-                world.
+                more sustainable. By choosing <strong>Alpha Herbs</strong>, you
+                are supporting a company that is dedicated to making a positive
+                impact on the world.
               </p>
               <Link
                 href="\"

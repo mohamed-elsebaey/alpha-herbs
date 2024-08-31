@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function EnglishPage() {
   return (
@@ -26,8 +27,10 @@ function EnglishPage() {
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div className="mb-10 w-full">
             <div className="mb-8 overflow-hidden rounded">
-              <img
-                src="../images/medicinal-plants/mint.jpeg"
+              <Image
+                width={350}
+                height={350}
+                src="/images/medicinal-plants/mint.jpeg"
                 alt="Mint plant"
                 className="w-full"
               />
@@ -55,8 +58,10 @@ function EnglishPage() {
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div className="mb-10 w-full">
             <div className="mb-8 overflow-hidden rounded">
-              <img
-                src="../images/medicinal-plants/basil.jpg"
+              <Image
+                width={350}
+                height={350}
+                src="/images/medicinal-plants/basil.jpg"
                 alt="Basil plant"
                 className="w-full"
               />
@@ -84,8 +89,10 @@ function EnglishPage() {
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div className="mb-10 w-full">
             <div className="mb-8 overflow-hidden rounded">
-              <img
-                src="../images/medicinal-plants/dill.jpg"
+              <Image
+                width={350}
+                height={350}
+                src="/images/medicinal-plants/dill.jpg"
                 alt="Dill plant"
                 className="w-full"
               />
@@ -113,8 +120,10 @@ function EnglishPage() {
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div className="mb-10 w-full">
             <div className="mb-8 overflow-hidden rounded">
-              <img
-                src="../images/medicinal-plants/chamomile.jpeg"
+              <Image
+                width={350}
+                height={350}
+                src="/images/medicinal-plants/chamomile.jpeg"
                 alt="Chamomile plant"
                 className="w-full"
               />
