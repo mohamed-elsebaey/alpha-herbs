@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 function Images() {
   return (
@@ -8,48 +8,60 @@ function Images() {
           {/*  */}
           <div className="hidden w-1/2 flex-wrap lg:flex">
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
+                width={350}
+                height={350}
+                src="/images/imageGallery/1.jpeg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="images/imageGallery/1.jpeg"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
+                width={350}
+                height={350}
+                src="/images/imageGallery/2.jpeg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg  object-cover object-center"
-                src="images/imageGallery/2.jpeg"
               />
             </div>
             <div className="w-full p-1 md:p-2">
-              <img
+              <Image
+                width={350}
+                height={350}
+                src="/images/imageGallery/3.jpg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg rounded-bl-[100px] object-cover object-center"
-                src="images/imageGallery/3.jpg"
               />
             </div>
           </div>
           {/*  */}
           <div className="flex w-full lg:w-1/2 flex-wrap">
             <div className="w-full p-1 md:p-2">
-              <img
+              <Image
+                width={350}
+                height={350}
+                src="/images/imageGallery/4.jpg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg rounded-tr-[100px] object-cover object-center"
-                src="images/imageGallery/4.jpg"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
+                width={350}
+                height={350}
+                src="/images/imageGallery/5.jpg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="images/imageGallery/5.jpg"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
-              <img
+              <Image
+                width={350}
+                height={350}
+                src="/images/imageGallery/6.jpeg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
-                src="images/imageGallery/6.jpeg"
               />
             </div>
           </div>
