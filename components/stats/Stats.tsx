@@ -46,7 +46,7 @@ function Stats() {
         <Image
           width={350}
           height={350}
-          src="../images/stats/background-shape.svg"
+          src="/images/stats/background-shape.svg"
           alt="graphic"
           className="h-full w-full"
         />
