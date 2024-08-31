@@ -1,9 +1,8 @@
-import React from 'react'
+import Blogs from "@/components/blogs/Blogs";
+import React from "react";
 
 function page() {
-  return (
-    <div>page</div>
-  )
+  return <Blogs />;
 }
 
-export default page
+export default page;

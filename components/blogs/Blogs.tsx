@@ -24,6 +24,7 @@ function Blogs() {
           {language === "english" ? "Arabic" : "English"}
         </button>
         {language === "arabic" ? <ArabicPage /> : <EnglishPage />}
+        {/* {language === "arabic" ? <h1>Arabic</h1> : <h1>English</h1>} */}
       </div>
     </section>
   );
