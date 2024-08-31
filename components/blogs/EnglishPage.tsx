@@ -10,7 +10,7 @@ function EnglishPage() {
             <span className="mb-2 block text-lg font-semibold text-primary">
               Our Blogs
             </span>
-            <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-4xl">
+            <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">
               Discover the Power of Organic Medicinal and Aromatic Plants
             </h2>
             <p className="text-base text-secondary">
@@ -39,9 +39,9 @@ function EnglishPage() {
               <h3>
                 <a
                   href="#"
-                  className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                  className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  The Health Benefits of Mint: From Digestion to Mental Clarity
+                  Mint: Nature's Refreshing Remedy for Digestion and More
                 </a>
               </h3>
               <p className="text-base text-secondary ">
@@ -66,12 +66,12 @@ function EnglishPage() {
                 Dec 1, 2024
               </span>
               <h3>
-                <Link
-                  href="/blog/Basil: A Culinary Delight and Healthful Herb"
+                <a
+                  href="#"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Basil: A Culinary Delight and Healthful Herb
-                </Link>
+                </a>
               </h3>
               <p className="text-base text-secondary ">
                 Elevate your cooking and your health with organic basil. Learn
@@ -95,12 +95,12 @@ function EnglishPage() {
                 Dec 1, 2024
               </span>
               <h3>
-                <Link
-                  href="/blog/Dill: A Versatile Herb for Digestion and Flavor"
+                <a
+                  href="#"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Dill: A Versatile Herb for Digestion and Flavor
-                </Link>
+                </a>
               </h3>
               <p className="text-base text-secondary ">
                 Discover the many uses of dill, from enhancing your dishes to
@@ -126,9 +126,9 @@ function EnglishPage() {
               <h3>
                 <a
                   href="#"
-                  className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                  className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Chamomile: A Calming Herb for Relaxation and Sleep
+                  Chamomile: Nature's Soothing Elixir for Relaxation and Sleep
                 </a>
               </h3>
               <p className="text-base text-secondary ">
