@@ -37,12 +37,12 @@ function EnglishPage() {
                 Dec 1, 2024
               </span>
               <h3>
-                <a
-                  href="#"
+                <Link
+                  href="/blog/Mint: Nature&apos;s Refreshing Remedy for Digestion and More"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Mint: Nature&apos;s Refreshing Remedy for Digestion and More
-                </a>
+                </Link>
               </h3>
               <p className="text-base text-secondary ">
                 Discover the incredible benefits of organic mint. From aiding
@@ -66,12 +66,12 @@ function EnglishPage() {
                 Dec 1, 2024
               </span>
               <h3>
-                <a
-                  href="#"
+                <Link
+                  href="/blog/Basil: A Culinary Delight and Healthful Herb"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Basil: A Culinary Delight and Healthful Herb
-                </a>
+                </Link>
               </h3>
               <p className="text-base text-secondary ">
                 Elevate your cooking and your health with organic basil. Learn
@@ -95,12 +95,12 @@ function EnglishPage() {
                 Dec 1, 2024
               </span>
               <h3>
-                <a
-                  href="#"
+                <Link
+                  href="/blog/Dill: A Versatile Herb for Digestion and Flavor"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Dill: A Versatile Herb for Digestion and Flavor
-                </a>
+                </Link>
               </h3>
               <p className="text-base text-secondary ">
                 Discover the many uses of dill, from enhancing your dishes to
@@ -124,12 +124,12 @@ function EnglishPage() {
                 Dec 1, 2024
               </span>
               <h3>
-                <a
-                  href="#"
+                <Link
+                  href="/blog/Chamomile: Nature&apos;s Soothing Elixir for Relaxation and Sleep"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Chamomile: Nature&apos;s Soothing Elixir for Relaxation and Sleep
-                </a>
+                </Link>
               </h3>
               <p className="text-base text-secondary ">
                 Find relief from stress and insomnia with chamomile. Learn how
