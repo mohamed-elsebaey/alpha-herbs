@@ -4,11 +4,7 @@ import EnglishPage from "./EnglishPage";
 import ArabicPage from "./ArabicPage";
 
 function Blogs() {
-  const [language, setLanguage] = useState(getCookie("language") || "english");
-
-  useEffect(() => {
-    setCookie("language", language, 365);
-  }, [language]);
+  const [language, setLanguage] = useState("english");
 
   const handleLanguageChange = () => {
     setLanguage(language === "english" ? "arabic" : "english");
@@ -24,28 +20,9 @@ function Blogs() {
           {language === "english" ? "Arabic" : "English"}
         </button>
         {language === "arabic" ? <ArabicPage /> : <EnglishPage />}
-        {/* {language === "arabic" ? <h1>Arabic</h1> : <h1>English</h1>} */}
       </div>
     </section>
   );
 }
 
 export default Blogs;
-
-function getCookie(name: String) {
-  const cookies = document.cookie.split(";");
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim();
-    if (cookie.startsWith(name + "=")) {
-      return cookie.substring(name.length + 1);
-    }
-  }
-  return null;
-}
-
-function setCookie(name: String, value: String, days: any) {
-  const expires = new Date();
-  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-  document.cookie =
-    name + "=" + value + "; expires=" + expires.toUTCString() + "; path=/";
-}
