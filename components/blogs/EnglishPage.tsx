@@ -41,7 +41,7 @@ function EnglishPage() {
                   href="#"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Mint: Nature's Refreshing Remedy for Digestion and More
+                  Mint: Nature&apos;s Refreshing Remedy for Digestion and More
                 </a>
               </h3>
               <p className="text-base text-secondary ">
@@ -128,7 +128,7 @@ function EnglishPage() {
                   href="#"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
-                  Chamomile: Nature's Soothing Elixir for Relaxation and Sleep
+                  Chamomile: Nature&apos;s Soothing Elixir for Relaxation and Sleep
                 </a>
               </h3>
               <p className="text-base text-secondary ">
