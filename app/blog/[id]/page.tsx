@@ -6,6 +6,11 @@ interface BlogPostPageProps {
   };
 }
 
+export const metadata = {
+  title: "soon ...",
+  description: "Explore the world of medicinal and aromatic plants...",
+};
+
 function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <section className="bg-white py-20 lg:py-[120px]">
