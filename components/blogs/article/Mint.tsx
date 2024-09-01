@@ -127,14 +127,14 @@ function Mint() {
           height={350}
           src="/images/imageGallery/7.jpg"
           alt="Image of fresh mint leaves"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg hidden sm:block"
         />
         <Image
           width={350}
           height={350}
           src="/images/imageGallery/1.jpeg"
           alt="Image of fresh mint leaves"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg hidden md:block"
         />
       </div>
 
