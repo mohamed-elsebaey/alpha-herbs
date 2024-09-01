@@ -41,7 +41,7 @@ function EnglishPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/Mint: Nature&apos;s Refreshing Remedy for Digestion and More"
+                  href="/blog/Mint"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Mint: Nature&apos;s Refreshing Remedy for Digestion and More
@@ -72,7 +72,7 @@ function EnglishPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/Basil: A Culinary Delight and Healthful Herb"
+                  href="/blog/Basil"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Basil: A Culinary Delight and Healthful Herb
@@ -103,7 +103,7 @@ function EnglishPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/Dill: A Versatile Herb for Digestion and Flavor"
+                  href="/blog/Dill"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Dill: A Versatile Herb for Digestion and Flavor
@@ -134,7 +134,7 @@ function EnglishPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/Chamomile: Nature&apos;s Soothing Elixir for Relaxation and Sleep"
+                  href="/blog/Chamomile"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   Chamomile: Nature&apos;s Soothing Elixir for Relaxation and Sleep

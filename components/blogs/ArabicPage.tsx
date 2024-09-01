@@ -43,7 +43,7 @@ function ArabicPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/النعناع: منشط طبيعي للهضم وأكثر من ذلك"
+                  href="/blog/Mint"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   النعناع: منشط طبيعي للهضم وأكثر من ذلك
@@ -73,7 +73,7 @@ function ArabicPage() {
               </span>
               <h3>
                 <Link
-                  href="blog/الريحان: متعة طهي وعشبة صحية"
+                  href="blog/Basil"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   الريحان: متعة طهي وعشبة صحية
@@ -103,7 +103,7 @@ function ArabicPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/الشبت: عشبة متعددة الاستخدامات للهضم والنكهة"
+                  href="/blog/Dill"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   الشبت: عشبة متعددة الاستخدامات للهضم والنكهة
@@ -133,7 +133,7 @@ function ArabicPage() {
               </span>
               <h3>
                 <Link
-                  href="/blog/البابونج: إكسير طبيعي مهدئ للاسترخاء والنوم"
+                  href="/blog/Chamomile"
                   className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                 >
                   البابونج: إكسير طبيعي مهدئ للاسترخاء والنوم
