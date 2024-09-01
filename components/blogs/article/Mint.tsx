@@ -58,7 +58,7 @@ function Mint() {
         </li>
       </ul>
 
-      <div className="flex justify-center my-16 gap-10">
+      <div className="flex justify-center my-16 gap-10 flex-wrap">
         <Image
           width={250}
           height={250}
@@ -114,7 +114,7 @@ function Mint() {
         </li>
       </ul>
 
-      <div className="flex justify-center my-16 gap-10">
+      <div className="flex justify-center my-16 gap-10 flex-wrap">
         <Image
           width={350}
           height={350}
