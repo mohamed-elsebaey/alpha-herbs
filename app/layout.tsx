@@ -6,6 +6,7 @@ const open_Sans = Open_Sans({ subsets: ["latin"] });
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Template from "./template";
 
 export const metadata: Metadata = {
   title: "Alpha Herbs",
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={open_Sans.className}>
         <Header />
-        {children}
+        <Template>{children}</Template>
         <Footer />
       </body>
     </html>
