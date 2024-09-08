@@ -2,6 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Video = () => {
   const [videoOpen, setVideoOpen] = useState(false);
@@ -402,9 +403,14 @@ const Video = () => {
             className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-70"
             onClick={onHandlePlay}
           >
-            <div className="mx-auto w-full max-w-[550px] bg-white">
-              <iframe id="video" className="h-[320px] w-full" src={videoSrc} />
-            </div>
+            <motion.div
+              initial={{ y: 150, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 0.75 }}
+              className=" bg-transparent mx-auto w-full h-full max-h-[250px] sm:max-h-[350px] md:max-h-[400px] lg:max-h-[550px] max-w-[80%] sm:max-w-[70%]"
+            >
+              <iframe id="video" className="h-full w-full" src={videoSrc} />
+            </motion.div>
           </div>
         )}
       </div>
