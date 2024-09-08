@@ -10,10 +10,13 @@ function Stats() {
           <div className="w-full px-4 md:w-1/2 lg:w-1/3">
             <div className="mx-auto mb-10 max-w-[325px] text-center lg:mb-0">
               <h3 className="mb-4 text-4xl font-bold leading-[1.2] text-white lg:text-5xl">
-                5M+
+                6+
               </h3>
               <p className="text-base text-white sm:text-lg">
-                Customers visit Omega every month to get their service done.
+                Years in business
+              </p>
+              <p className="text-base mt-0.5 text-white sm:text-lg">
+                Creating the successful path
               </p>
             </div>
           </div>
@@ -32,10 +35,11 @@ function Stats() {
           <div className="w-full px-4 md:w-1/2 lg:w-1/3">
             <div className="mx-auto max-w-[325px] text-center">
               <h3 className="mb-4 text-4xl font-bold leading-[1.2] text-white lg:text-5xl">
-                500+
+                37+
               </h3>
+              <p className="text-base text-white sm:text-lg">Team members.</p>
               <p className="text-base text-white sm:text-lg">
-                Average Award we have got all over internet.
+                Working for your success
               </p>
             </div>
           </div>
@@ -52,7 +56,7 @@ function Stats() {
         />
       </div>
     </section>
-    //  Stats Section End
+    //  Stats Section End 
   );
 }
 
