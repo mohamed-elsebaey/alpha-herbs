@@ -30,5 +30,8 @@ export const ServerComponent = async () => {
     );
   } catch (error) {
     console.error("Error fetching users:", error);
+    console.log("*********************************");
+    console.log("Error fetching users:", error);
+    console.log("*********************************");
   }
 };
