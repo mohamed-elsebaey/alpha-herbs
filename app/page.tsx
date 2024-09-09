@@ -6,7 +6,7 @@ import Products from "@/components/products/Product";
 import Video from "@/components/Video";
 import Stats from "@/components/stats/Stats";
 import Images from "@/components/Images";
-// import {ServerComponent}  from "@/components/Test";
+import {ServerComponent}  from "@/components/Test";
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Stats />
       <Products />
       <Newsletter />
-      {/* <ServerComponent /> */}
+      <ServerComponent />
     </>
   );
 }

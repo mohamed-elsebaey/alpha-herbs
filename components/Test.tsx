@@ -7,7 +7,7 @@ interface User {
 }
 
 export const ServerComponent = async () => {
-  const id = 130;
+  const id = 270;
   try {
     const data = await pool
       .promise()
