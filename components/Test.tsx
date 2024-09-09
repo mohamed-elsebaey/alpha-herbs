@@ -11,7 +11,7 @@ export const ServerComponent = async () => {
   try {
     const data = await pool
       .promise()
-      .query("SELECT * FROM users WHERE id = ? ", id);
+      .query("SELECT * FROM users WHERE id < ? ", id);
 
     // Assuming data[0] contains user objects
     const users: User[] = data[0] as User[];
