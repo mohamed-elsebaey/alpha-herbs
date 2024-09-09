@@ -5,7 +5,7 @@ function Mint() {
   return (
     <>
       <h1 className="text-3xl font-bold text-center mb-8">
-        Mint:   Nature&apos;s Refreshing Remedy for Digestion and More
+        Mint:   Nature's Refreshing Remedy for Digestion and More
       </h1>
       <div className="flex justify-center mb-8">
         <Image

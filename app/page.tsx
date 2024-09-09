@@ -18,7 +18,7 @@ export default function Home() {
       <Stats />
       <Products />
       <Newsletter />
-      {/* <ServerComponent /> */}
+      <ServerComponent />
     </>
   );
 }
