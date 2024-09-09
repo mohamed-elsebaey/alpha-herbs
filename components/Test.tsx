@@ -7,11 +7,11 @@ interface User {
 }
 
 export const ServerComponent = async () => {
-  const id = 10;
+  const id = 270;
   try {
     const data = await pool
       .promise()
-      .query("SELECT * FROM users WHERE id < ? ", id);
+      .query("SELECT * FROM users WHERE id = ? ", id);
 
     // Assuming data[0] contains user objects
     const users: User[] = data[0] as User[];
