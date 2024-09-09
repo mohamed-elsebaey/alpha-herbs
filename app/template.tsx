@@ -1,5 +1,6 @@
 "use client";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import { motion } from "framer-motion";
 
 export default function Template({ children }: { children: React.ReactNode }) {
@@ -11,6 +12,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     >
       {children}
       <SpeedInsights />
+      <Analytics />
     </motion.div>
   );
 }
