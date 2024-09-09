@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${open_Sans.className} mx-auto max-w-[1500px]`}>
+      <body className={`${open_Sans.className} mx-auto max-w-[1800px]`}>
         <Header />
         {/* Teplate used to add framer motion to evry child */}
         <Template>{children}</Template>
