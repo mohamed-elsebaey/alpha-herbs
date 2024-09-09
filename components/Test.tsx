@@ -1,42 +1,34 @@
-import React from "react";
+import pool from "../db"; // Import the connection pool
 
-function Test() {
-  return (
-    <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
-    <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Numbers tell our story</h2>
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 mt-10 text-center lg:mt-24 sm:gap-x-8 md:grid-cols-3">
-            <div>
-                <h3 className="font-bold text-7xl">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary2"> 6+ </span>
-                </h3>
-                <p className="mt-4 text-xl font-medium text-gray-900">Years in business</p>
-                <p className="text-base mt-0.5 text-gray-500">Creating the successful path</p>
-            </div>
-
-            <div>
-                <h3 className="font-bold text-7xl">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary2"> 4821 </span>
-                </h3>
-                <p className="mt-4 text-xl font-medium text-gray-900">Projects delivered</p>
-                <p className="text-base mt-0.5 text-gray-500">In last 6 years</p>
-            </div>
-
-            <div>
-                <h3 className="font-bold text-7xl">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-b from-primary to-primary2"> 37+ </span>
-                </h3>
-                <p className="mt-4 text-xl font-medium text-gray-900">Team members</p>
-                <p className="text-base mt-0.5 text-gray-500">Working for your success</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-  );
+interface User {
+  id: number;
+  name: string;
+  email: string;
 }
 
-export default Test;
+export const ServerComponent = async () => {
+  const id = 130;
+  try {
+    const data = await pool
+      .promise()
+      .query("SELECT * FROM users WHERE id=?", id);
+
+    // Assuming data[0] contains user objects
+    const users: User[] = data[0] as User[];
+
+    return (
+      <div className="container mx-auto p-4">
+        <h1 className="text-3xl font-bold text-gray-800">Users</h1>
+        <ul className="mt-4">
+          {users.map((user: User) => (
+            <li key={user.id} className="text-lg text-gray-600">
+              {user.id} -- {user.name} ------ {user.email}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  } catch (error) {
+    console.error("Error fetching users:", error);
+  }
+};

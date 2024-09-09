@@ -6,7 +6,8 @@ import Products from "@/components/products/Product";
 import Video from "@/components/Video";
 import Stats from "@/components/stats/Stats";
 import Images from "@/components/Images";
-import Test from "@/components/Test";
+// import {ServerComponent}  from "@/components/Test";
+
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
       <Images />
       <Stats />
       <Products />
-      {/* <Test /> */}
       <Newsletter />
+      {/* <ServerComponent /> */}
     </>
   );
 }
