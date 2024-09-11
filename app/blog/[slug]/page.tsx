@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   return {
     title: `alpha herbs | ${params.slug}`,
     description:
-      params.slug === "Mint"
+      params.slug == 'mint-natures-refreshing-remedy-for-digestion-and-more'
         ? "Explore the world of mint, its benefits, and how to use it."
         : "Explore the world of medicinal and aromatic plants...",
   };
@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 function BlogPostPage({ params }: BlogPostPageProps) {
   let data = (
     <>
-      <h1 className="font-bold text-6xl text-primary my-5">Blog Section</h1>
+      <h1 className="font-bold text-6xl text-primary my-5">Blog Section | {params.slug.split('-')[0].toUpperCase()}</h1>
       <h2 className="font-semibold text-3xl text-primary2 my-5">Soon ...</h2>
     </>
   );
 
-  if (params.slug == "Mint") {
+  if (params.slug == "mint-natures-refreshing-remedy-for-digestion-and-more") {
     data = <Mint />;
   }
 
@@ -40,7 +40,7 @@ function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="py-4 px-4 md:px-10 max-w-screen-xl mx-auto">
           <div
             className={`flex flex-col justify-center text-primary ${
-              params.slug !== "Mint" ? "text-center" : ""
+              params.slug !== "mint-natures-refreshing-remedy-for-digestion-and-more" ? "text-center" : ""
             }`}
           >
             {data}
