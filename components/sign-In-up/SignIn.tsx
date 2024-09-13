@@ -63,7 +63,7 @@ async function SignIn() {
                 Forget Password?
               </Link>
               <p className="text-base">
-                <span className="pr-0.5">Don't have an account?</span>
+                <span className="pr-0.5">Don&apos;t have an account?</span>
                 <Link href="/sign-up" className="text-primary font-bold">
                   Sign Up
                 </Link>
