@@ -49,7 +49,7 @@ function Header() {
           } w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="w-full font-medium flex flex-col gap-5 md:gap-10 items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white ">
+          <ul className="w-full font-medium flex flex-col gap-5 md:gap-8 items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white ">
             <li>
               <Link
                 href="/"
@@ -89,10 +89,19 @@ function Header() {
             <li className="mt-2 md:mt-0">
               <Link
                 href="/contact"
+                className="py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
+                onClick={closeMenueHandler}
+              >
+                Contact
+              </Link>
+            </li>
+            <li className="mt-2 md:mt-0">
+              <Link
+                href="/sign-in"
                 className="py-2 px-3 text-white rounded bg-primary hover:scale-105 transition "
                 onClick={closeMenueHandler}
               >
-                Contact Us
+                Sign In
               </Link>
             </li>
           </ul>
