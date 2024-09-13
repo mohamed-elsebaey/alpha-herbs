@@ -68,7 +68,7 @@ async function SignIn() {
                   Sign Up
                 </Link>
               </p>
-              <h1>{JSON.stringify(session, null, 2)}</h1>
+              {/* <h1>{JSON.stringify(session, null, 2)}</h1> */}
             </div>
           </div>
         </div>
