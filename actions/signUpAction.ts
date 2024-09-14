@@ -64,7 +64,7 @@ export async function signUpFormAction(prevState: any, formData: FormData) {
 
   const message = generateVerificationMessage(verificationCode);
 
-  return await sendMail({
+  await sendMail({
     to: email,
     name: "Alpha-Herbs.com",
     subject: "Verify Your Email",
