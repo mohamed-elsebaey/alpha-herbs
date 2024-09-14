@@ -1,6 +1,7 @@
 "use server";
 
 import { addNowUser } from "@/db";
+import { sendMail } from "@/mail";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
@@ -24,13 +25,51 @@ export async function signUpFormAction(prevState: any, formData: FormData) {
   }
 
   // step 1 --- check if email exits or not
-  // strp 2 --- if email not exits add data to mysql database
+  // step 2 --- if email not exits add data to mysql database
 
-  const dbFileCallBack = await addNowUser(email, password);
+  // ********************************************************************
+  const verificationCode = Math.floor(Math.random() * 10000);
+  // ********************************************************************
 
-  if(Object.keys(dbFileCallBack).length > 0 ){
-    return  dbFileCallBack;
+  const dbFileCallBack = await addNowUser(email, password,verificationCode);
+
+  if (Object.keys(dbFileCallBack).length > 0) {
+    return dbFileCallBack;
   }
+
+  // step 3 --- send verificationCode to new users
+
+  function generateVerificationMessage(verificationCode: number): string {
+    const codeDigits = verificationCode.toString().split(""); // تحويل الرقم إلى سلسلة ثم تقسيمها إلى أرقام فردية
+
+    const formattedCode = codeDigits
+      .map(
+        (digit) => `<span style="display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 5px;">${digit}</span>`
+      )
+      .join("");
+
+    return `
+      <p>Thank you for signing up!</p>
+      <p>Your verification code is:<br><span style="font-weight: bold; color : teal;">${formattedCode}</span></p>
+      <p>Please enter this code on the verification page to activate your account.</p>
+    `;
+  }
+
+  const message = generateVerificationMessage(verificationCode);
+
+  return await sendMail({
+    to: email,
+    name: "Alpha-Herbs.com",
+    subject: "Verify Your Email",
+    body: message,
+  });
   // revalidatePath("/sign-in");
 
   redirect("/sign-in");

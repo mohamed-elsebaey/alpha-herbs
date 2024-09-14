@@ -47,7 +47,7 @@ export async function getAllBlogs() {
 
 // --------------------------------------------------------------
 
-export async function addNowUser(email: string, password: string) {
+export async function addNowUser(email: string, password: string ,verCode:Number) {
   if (typeof password !== "string") {
     throw new Error("Password must be a string");
   }
@@ -63,9 +63,10 @@ export async function addNowUser(email: string, password: string) {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  await executeQuery("INSERT INTO users (email, password) VALUES (?, ?)", [
+  await executeQuery("INSERT INTO users (email, password, verCode) VALUES (?, ?,?)", [
     email,
     hashedPassword,
+    verCode,
   ]);
 
   // return { message: "User created successfully" }; 
