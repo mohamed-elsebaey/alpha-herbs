@@ -8,6 +8,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import logo from "@/public/logo/logo.svg";
 // import { getSession, login } from "@/lib";
 import { signUpFormAction } from "@/actions/signUpAction";
+import { useEffect, useState } from "react";
 
 const initialStat = {
   errors: {
@@ -32,7 +33,15 @@ function SubmitButton() {
 
 function SignUp() {
   const [formState, formAction] = useFormState(signUpFormAction, initialStat);
-  const formStateType: any = formState;
+  const [formStateType, setFormStateType] = useState<any>({});
+
+  useEffect(() => {
+    setFormStateType(formState);
+  }, [formState]);
+
+  const onChangHandler = () => {
+    setFormStateType({});
+  };
 
   return (
     <section className=" bg-gradient-to-r from-primary/10 to-primary2/10 py-20 lg:py-[120px]">
@@ -53,13 +62,17 @@ function SignUp() {
                 </Link>
               </div>
               {/* *** Form Start *** */}
-              <form action={formAction}>
+              <form action={formAction} onChange={onChangHandler}>
                 <div className="mb-6">
                   <input
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="relative w-full rounded-md border border-gray-300  px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
+                    className={`relative w-full rounded-md border ${
+                      formStateType?.errors?.email
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/50"
+                        : "border-gray-300 focus:border-primary focus:ring-primary/50"
+                    } px-4 py-2 focus:outline-none focus:ring-1`}
                   />
                   {formStateType?.errors?.email && (
                     <h1 className="text-red-500 absolute">
@@ -72,7 +85,11 @@ function SignUp() {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    className="relative w-full rounded-md border border-gray-300  px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
+                    className={`relative w-full rounded-md border ${
+                      formStateType?.errors?.password
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/50"
+                        : "border-gray-300 focus:border-primary focus:ring-primary/50"
+                    } px-4 py-2 focus:outline-none focus:ring-1`}
                   />
                   {formStateType?.errors?.password && (
                     <h1 className="text-red-500 absolute">
