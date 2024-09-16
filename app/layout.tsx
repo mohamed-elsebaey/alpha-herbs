@@ -25,7 +25,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const ifLogin : any = Accessibility();
+  const ifLogin : any = await Accessibility();
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${open_Sans.className} mx-auto max-w-[1800px]`}>

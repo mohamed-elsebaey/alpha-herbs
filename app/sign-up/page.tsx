@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: "Sign Up to watch more and more ...",
 };
 
-function page() {
-  const ifLogin: any = Accessibility();
+async function page() {
+  const ifLogin: any = await Accessibility();
   if (ifLogin) {
     redirect("/");
   }
