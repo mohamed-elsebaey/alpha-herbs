@@ -9,7 +9,7 @@ import "./globals.css";
 const open_Sans = Open_Sans({ subsets: ["latin"] });
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Template from "./template";
 import { Accessibility } from "@/components/Accessibility";
 
