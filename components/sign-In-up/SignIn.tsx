@@ -57,7 +57,7 @@ function SignIn() {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="w-full rounded-md border bg-transparent px-5 py-3 focus:border-primary "
+                    className="relative w-full rounded-md border border-gray-300  px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
                   />
                   {formStateType?.errors?.email && (
                     <h1 className="text-red-500 absolute">
@@ -70,7 +70,7 @@ function SignIn() {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    className="w-full rounded-md border  bg-transparent px-5 py-3 focus:border-primary "
+                    className="relative w-full rounded-md border border-gray-300  px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
                   />
                   {formStateType?.errors?.password && (
                     <h1 className="text-red-500 absolute">
