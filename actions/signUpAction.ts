@@ -1,6 +1,7 @@
 "use server";
 
 import { addNowUser } from "@/db";
+import { addUserSessions } from "@/lib";
 import { sendMail } from "@/mail";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -40,7 +41,7 @@ export async function signUpFormAction(prevState: any, formData: FormData) {
   // step 3 --- send verificationCode to new users
 
   function generateVerificationMessage(verificationCode: number): string {
-    const codeDigits = verificationCode.toString().split(""); // تحويل الرقم إلى سلسلة ثم تقسيمها إلى أرقام فردية
+    const codeDigits = verificationCode.toString().split("");
 
     const formattedCode = codeDigits
       .map(
@@ -64,13 +65,13 @@ export async function signUpFormAction(prevState: any, formData: FormData) {
 
   const message = generateVerificationMessage(verificationCode);
 
-  await sendMail({
-    to: email,
-    name: "Alpha-Herbs.com",
-    subject: "Verify Your Email",
-    body: message,
-  });
+  //  await sendMail({
+  //   to: email,
+  //   name: "Alpha-Herbs.com",
+  //   subject: "Verify Your Email",
+  //   body: message,
+  // });
   // revalidatePath("/sign-in");
-
-  redirect("/sign-in");
+  addUserSessions(formData);
+  redirect("/");
 }

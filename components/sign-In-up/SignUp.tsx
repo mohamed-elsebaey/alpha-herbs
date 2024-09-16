@@ -16,12 +16,23 @@ const initialStat = {
   },
 };
 
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
+      type="submit"
+      aria-disabled={pending}
+    >
+      Create an Account
+    </button>
+  );
+}
+
 function SignUp() {
   const [formState, formAction] = useFormState(signUpFormAction, initialStat);
-  const formStateWithTypeAny: any = formState;
-  // error we need to add typeof formState
-
-  const { pending } = useFormStatus();
+  const formStateType: any = formState;
 
   return (
     <section className=" bg-gradient-to-r from-primary/10 to-primary2/10 py-20 lg:py-[120px]">
@@ -50,9 +61,9 @@ function SignUp() {
                     placeholder="Email"
                     className="relative w-full rounded-md border border-gray-300  px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
                   />
-                  {formStateWithTypeAny?.errors?.email && (
+                  {formStateType?.errors?.email && (
                     <h1 className="text-red-500 absolute">
-                      {formStateWithTypeAny.errors["email"]}
+                      {formStateType.errors["email"]}
                     </h1>
                   )}
                 </div>
@@ -63,18 +74,14 @@ function SignUp() {
                     placeholder="Password"
                     className="relative w-full rounded-md border border-gray-300  px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/50"
                   />
-                  {formStateWithTypeAny?.errors?.password && (
+                  {formStateType?.errors?.password && (
                     <h1 className="text-red-500 absolute">
-                      {formStateWithTypeAny.errors["password"]}
+                      {formStateType?.errors["password"]}
                     </h1>
                   )}
                 </div>
                 <div className={"mb-10"}>
-                  <input
-                    type="submit"
-                    value="Crate an Account"
-                    className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
-                  />
+                  <SubmitButton />
                 </div>
               </form>
               {/* *** Form Emd *** */}
@@ -85,9 +92,9 @@ function SignUp() {
                   Sign In
                 </Link>
               </p>
-              {formStateWithTypeAny?.message && (
+              {formStateType?.message && (
                 <h1 className="text-orange-600 text-center">
-                  {formStateWithTypeAny.message}
+                  {formStateType.message}
                 </h1>
               )}
             </div>

@@ -72,3 +72,25 @@ export async function addNowUser(email: string, password: string ,verCode:Number
   // return { message: "User created successfully" }; 
   return {};
 }
+// ---------------------------------------------------------------------------------------
+
+
+export async function userDataAuthentication(email: string, password: string) {
+  const existingUser = await executeQuery(
+    "SELECT * FROM users WHERE email = ?",
+    [email]
+  );
+
+  if (existingUser.length == 0) {
+    return { errors: { email: "* Invalid email " } };
+  }
+
+  const user : any = existingUser[0]; 
+  const isPasswordMatch = await bcrypt.compare(password, user.password);
+
+  if (!isPasswordMatch) {
+    return { errors: { password: "* Incorrect password" } };
+  }
+
+  return {}; 
+}

@@ -6,8 +6,9 @@ import { useState } from "react";
 import { AlignJustify, X } from "lucide-react";
 
 import logo from "@/public/logo/logo.svg";
+import profile from "@/public/profile-pictures/profile.png";
 
-function Header() {
+function Header({ login }: { login: boolean }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenueHandler = () => {
@@ -96,13 +97,25 @@ function Header() {
               </Link>
             </li>
             <li className="mt-2 md:mt-0">
-              <Link
-                href="/sign-in"
-                className="py-2 px-3 text-white rounded bg-primary hover:scale-105 transition "
-                onClick={closeMenueHandler}
-              >
-                Sign In
-              </Link>
+              {!login ? (
+                <Link
+                  href="/sign-in"
+                  className="py-2 px-3 text-white rounded bg-primary hover:scale-105 transition "
+                  onClick={closeMenueHandler}
+                >
+                  Sign In
+                </Link>
+              ) : (
+                <Link href="" onClick={closeMenueHandler} >
+                  <Image
+                    width={30}
+                    height={30}
+                    src={profile}
+                    alt=""
+                    className="w-full rounded-full border "
+                  />{" "}
+                </Link>
+              )}
             </li>
           </ul>
         </div>

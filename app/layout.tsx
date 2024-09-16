@@ -11,6 +11,8 @@ const open_Sans = Open_Sans({ subsets: ["latin"] });
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Template from "./template";
+import { Accessibility } from "@/components/Accessibility";
+
 
 export const metadata: Metadata = {
   title: "Alpha Herbs",
@@ -18,15 +20,16 @@ export const metadata: Metadata = {
     "Discover the healing power of nature with our wide selection of organic herbs and plants.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const ifLogin : any = Accessibility();
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${open_Sans.className} mx-auto max-w-[1800px]`}>
-        <Header />
+        <Header login={ifLogin}/>
         {/* Teplate used to add framer motion to evry child */}
         <Template>{children}</Template>
         {/* website speed insights */}

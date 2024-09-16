@@ -1,5 +1,7 @@
+import { Accessibility } from "@/components/Accessibility";
 import SignIn from "@/components/sign-In-up/SignIn";
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Alpha Herbs | Login",
@@ -7,6 +9,10 @@ export const metadata: Metadata = {
 };
 
 function page() {
+  const ifLogin: any = Accessibility();
+  if (ifLogin) {
+    redirect("/");
+  }
   return (
     <>
       <SignIn />

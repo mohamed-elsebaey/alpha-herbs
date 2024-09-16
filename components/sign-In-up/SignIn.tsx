@@ -1,18 +1,38 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo/logo.svg";
 
-import { redirect } from "next/navigation";
-import { getSession, login } from "@/lib";
+import { getSession, addUserSessions } from "@/lib";
+import { useFormState, useFormStatus } from "react-dom";
 
-async function SignIn() {
-  const session = await getSession();
+import { signInFormAction } from "@/actions/signInAction";
 
-  const onFormHandler = async (formData: FormData) => {
-    "use server";
-    await login(formData);
-    // redirect("/");
-  };
+const initialStat = {
+  errors: {
+    email: undefined,
+    password: undefined,
+  },
+};
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
+      type="submit"
+      aria-disabled={pending}
+    >
+      Sign In
+    </button>
+  );
+}
+
+function SignIn() {
+  const [formState, formAction] = useFormState(signInFormAction, initialStat);
+  const formStateType: any = formState;
+
   return (
     <section className=" bg-gradient-to-r from-primary/10 to-primary2/10 py-20 lg:py-[120px]">
       <div className="container mx-auto">
@@ -31,7 +51,7 @@ async function SignIn() {
                   </span>
                 </Link>
               </div>
-              <form action={onFormHandler}>
+              <form action={formAction}>
                 <div className="mb-6">
                   <input
                     type="email"
@@ -39,6 +59,11 @@ async function SignIn() {
                     placeholder="Email"
                     className="w-full rounded-md border bg-transparent px-5 py-3 focus:border-primary "
                   />
+                  {formStateType?.errors?.email && (
+                    <h1 className="text-red-500 absolute">
+                      {formStateType.errors["email"]}
+                    </h1>
+                  )}
                 </div>
                 <div className="mb-6">
                   <input
@@ -47,13 +72,14 @@ async function SignIn() {
                     placeholder="Password"
                     className="w-full rounded-md border  bg-transparent px-5 py-3 focus:border-primary "
                   />
+                  {formStateType?.errors?.password && (
+                    <h1 className="text-red-500 absolute">
+                      {formStateType?.errors["password"]}
+                    </h1>
+                  )}
                 </div>
                 <div className="mb-10">
-                  <input
-                    type="submit"
-                    value="Sign In"
-                    className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
-                  />
+                  <SubmitButton />
                 </div>
               </form>
               <Link
