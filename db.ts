@@ -47,7 +47,11 @@ export async function getAllBlogs() {
 
 // --------------------------------------------------------------
 
-export async function addNowUser(email: string, password: string ,verCode:Number) {
+export async function addNowUser(
+  email: string,
+  password: string,
+  verCode: Number
+) {
   if (typeof password !== "string") {
     throw new Error("Password must be a string");
   }
@@ -63,17 +67,15 @@ export async function addNowUser(email: string, password: string ,verCode:Number
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  await executeQuery("INSERT INTO users (email, password, verCode) VALUES (?, ?,?)", [
-    email,
-    hashedPassword,
-    verCode,
-  ]);
+  await executeQuery(
+    "INSERT INTO users (email, password, verCode) VALUES (?, ?,?)",
+    [email, hashedPassword, verCode]
+  );
 
-  // return { message: "User created successfully" }; 
+  // return { message: "User created successfully" };
   return {};
 }
 // ---------------------------------------------------------------------------------------
-
 
 export async function userDataAuthentication(email: string, password: string) {
   const existingUser = await executeQuery(
@@ -85,12 +87,46 @@ export async function userDataAuthentication(email: string, password: string) {
     return { errors: { email: "* Invalid email " } };
   }
 
-  const user : any = existingUser[0]; 
+  const user: any = existingUser[0];
   const isPasswordMatch = await bcrypt.compare(password, user.password);
 
   if (!isPasswordMatch) {
     return { errors: { password: "* Incorrect password" } };
   }
 
-  return {}; 
+  return {};
+}
+
+// ---------------------------------------------------------------------------------------
+
+export async function getUserDataFromDB(email: string) {
+  const existingUser = await executeQuery(
+    "SELECT * FROM users WHERE email = ?",
+    [email]
+  );
+
+  if (existingUser.length == 0) {
+    return { errors: { email: "* Invalid email " } };
+  }
+
+  const user = existingUser[0];
+
+  return user;
+}
+// ---------------------------------------------------------------------------------------
+
+export async function updateUserProfileData(
+  email: String,
+  name: string,
+  phone: String,
+  country: String,
+  profilePath: String
+) {
+  const UpdateData = await executeQuery(
+    "UPDATE users SET name = ? , phone = ? , country = ? , profilePath = ? WHERE email = ?",
+    [name, phone, country, profilePath, email]
+  );
+
+  
+  return UpdateData;
 }

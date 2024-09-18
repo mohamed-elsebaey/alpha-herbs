@@ -3,12 +3,7 @@ import { getSession } from "@/lib";
 
 export async function Accessibility() {
   const session = await getSession();
-  const login = session?.user.email ? true : false;
+  const loginEmail = session?.user.email ? session?.user.email : false;
 
-  if (login) {
-    const email = session?.user.email;
-    const password = session?.user.password;
-  }
-
-  return login;
+  return loginEmail;
 }
