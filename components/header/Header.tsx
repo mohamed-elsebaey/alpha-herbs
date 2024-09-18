@@ -9,7 +9,13 @@ import OutsideClickHandler from "react-outside-click-handler";
 import logo from "@/public/logo/logo.svg";
 import Avatar from "./Avatar";
 
-function Header({ login }: { login: boolean }) {
+function Header({
+  login,
+  profilePath,
+}: {
+  login: boolean;
+  profilePath: string;
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenueHandler = () => {
@@ -113,7 +119,7 @@ function Header({ login }: { login: boolean }) {
                     Sign In
                   </Link>
                 ) : (
-                  <Avatar onClick={closeMenueHandler} />
+                  <Avatar onClick={closeMenueHandler} profilePath={profilePath}/>
                 )}
               </li>
             </ul>

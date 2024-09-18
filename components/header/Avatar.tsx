@@ -7,7 +7,13 @@ import profile from "@/public/profile-pictures/profile.png";
 import Link from "next/link";
 import { logOutAction } from "@/actions/logOutAction";
 
-const Avatar = ({ onClick }: { onClick: any }) => {
+const Avatar = ({
+  onClick,
+  profilePath,
+}: {
+  onClick: any;
+  profilePath: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClickOutside = () => {
@@ -23,12 +29,10 @@ const Avatar = ({ onClick }: { onClick: any }) => {
             className="flex gap-2 items-center"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Image
-              width={30}
-              height={30}
-              src={profile}
-              alt=""
-              className="w-full rounded-full border "
+            <img
+              className="object-cover w-10 h-10 rounded-full"
+              src={profilePath ? profilePath : "/profile-pictures/profile.png"}
+              alt="avatar"
             />
             <span
               className={`duration-100 transform ${

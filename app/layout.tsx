@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/header/Header";
 import Template from "./template";
 import { Accessibility } from "@/components/Accessibility";
+import { getUserDataFromDB } from "@/db";
 
 
 export const metadata: Metadata = {
@@ -26,10 +27,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const ifLogin : any = await Accessibility();
+  const {profilePath} : any = await getUserDataFromDB(ifLogin);
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${open_Sans.className} mx-auto max-w-[1800px]`}>
-        <Header login={ifLogin}/>
+        <Header login={ifLogin} profilePath={profilePath}/>
         {/* Teplate used to add framer motion to evry child */}
         <Template>{children}</Template>
         {/* website speed insights */}

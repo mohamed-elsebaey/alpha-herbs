@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 import { uploadImage } from "@/cloudinary";
 import { updateUserProfileData } from "@/db";
+import { revalidatePath } from "next/cache";
 
 export async function profileEditActions(prevState: any, formData: FormData) {
   const first_name: any = formData.get("first_name");
@@ -14,7 +15,7 @@ export async function profileEditActions(prevState: any, formData: FormData) {
   const fullName = `${first_name} ${last_name}`;
 
   // if use use CLOUDINARY
-  let imageUrl: any;
+  let imageUrl: any = null;
   try {
     if (image.size != 0) {
       imageUrl = await uploadImage(image);
@@ -25,5 +26,7 @@ export async function profileEditActions(prevState: any, formData: FormData) {
 
   // update dataBase Where Email
   updateUserProfileData(email, fullName, phone, country, imageUrl);
+  revalidatePath("/","layout");
+
   return {};
 }
