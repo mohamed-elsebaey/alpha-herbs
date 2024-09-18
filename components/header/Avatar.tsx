@@ -54,9 +54,10 @@ const Avatar = ({ onClick }: { onClick: any }) => {
               className="absolute right-0 top-12 z-10 w-48 bg-white shadow-md rounded-md py-2"
               //   onClick={handleClickOutside}
             >
-              <a
-                href="#"
+              <Link
+                href="/profile"
                 className="block px-4 py-2 hover:bg-gray-100 hover:text-primary"
+                onClick={handleClickOutside}
               >
                 <span className="flex items-center gap-2">
                   <svg
@@ -77,10 +78,11 @@ const Avatar = ({ onClick }: { onClick: any }) => {
                   </svg>
                   View profile
                 </span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 hover:text-primary"
+                onClick={handleClickOutside}
               >
                 <span className="flex items-center gap-2">
                   <svg
@@ -108,10 +110,9 @@ const Avatar = ({ onClick }: { onClick: any }) => {
                   </svg>
                   Settings
                 </span>
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:bg-gray-100 hover:text-primary"
+              </Link>
+              <div
+                className="block px-4 py-2 hover:bg-gray-100 hover:text-primary cursor-pointer"
                 onClick={() => {
                   logOutAction();
                 }}
@@ -135,7 +136,7 @@ const Avatar = ({ onClick }: { onClick: any }) => {
                   </svg>
                   Log out
                 </span>
-              </a>
+              </div>
             </div>
           )}
         </div>
@@ -143,7 +144,7 @@ const Avatar = ({ onClick }: { onClick: any }) => {
 
       <div className="inline-block md:hidden ">
         <Link
-          href="/#profile"
+          href="/profile"
           className="text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
           onClick={onClick}
         >
@@ -199,7 +200,8 @@ const Avatar = ({ onClick }: { onClick: any }) => {
             Settings
           </span>
         </Link>
-        <div
+        <a
+          href="/"
           className="text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 cursor-pointer"
           onClick={() => {
             onClick();
@@ -225,7 +227,7 @@ const Avatar = ({ onClick }: { onClick: any }) => {
             </svg>
             Log out
           </span>
-        </div>
+        </a>
       </div>
     </>
   );
