@@ -38,7 +38,7 @@ export default async function RootLayout({
         <SpeedInsights />
         {/* website Analytics  */}
         <Analytics />
-        <Footer />
+        <Footer login={ifLogin}/>
       </body>
     </html>
   );

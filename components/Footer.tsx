@@ -3,9 +3,14 @@ import Image from "next/image";
 import { PhoneIncoming } from "lucide-react";
 import logo from "@/public/logo/logo.svg";
 
-function Footer() {
+function Footer({ login }: { login: boolean }) {
   return (
-    <footer className="relative z-10 pb-10 pt-10">
+    // login to Change footer background color when user sign in *
+    <footer
+      className={`relative z-10 pb-10 pt-10 ${
+        login && "bg-gradient-to-r from-primary/10 to-primary2/10"
+      }`}
+    >
       <div className="py-4 px-4 md:px-10 max-w-screen-xl mx-auto">
         {/* inside Container */}
         <div className="flex flex-row justify-between lg:justify-between flex-wrap gap-10">
