@@ -48,10 +48,10 @@ function Profile({ userData }: { userData: any }) {
   };
 
   return (
-    <section className=" bg-gradient-to-r from-primary/10 to-primary2/10 py-28 lg:py-[120px]">
-      <div className="w-full mx-auto max-w-[1000px] overflow-hidden rounded-lg bg-white px-10 py-16  sm:px-12 md:px-[60px]-2">
+    <section className="py-28 lg:py-[120px]">
+      <div className="w-full mx-auto max-w-[1000px] overflow-hidden rounded-lg  px-10 py-16  sm:px-12 md:px-[60px]-2  bg-gradient-to-r from-primary/10 to-primary2/10">
         <form
-          className="w-full min-h-screen py-1 md:w-2/3 lg:w-3/4 mx-auto"
+          className="w-full min-h-screen py-1 md:w-2/3 lg:w-3/4 mx-auto "
           action={formAction}
         >
           <ProfileAvatar imagePath={userData.profilePath} />
@@ -67,6 +67,7 @@ function Profile({ userData }: { userData: any }) {
                   id="first_name"
                   name="first_name"
                   className="bg-primary/5 border border-primary/30 text-primary/90 text-sm rounded-lg focus:ring-primary/50 focus:border-primary/50 block w-full p-2.5 "
+                  
                   placeholder="Your first name"
                   value={firstName}
                   onChange={handleFirstNameChange}
