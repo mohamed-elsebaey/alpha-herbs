@@ -24,9 +24,9 @@ function SubmitButton() {
     <button
       className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
       type="submit"
-      aria-disabled={pending}
+      disabled={pending}
     >
-      Create an Account
+      {pending ? "Lpading..." : "Create an Account"}
     </button>
   );
 }
@@ -105,7 +105,10 @@ function SignUp() {
 
               <p className="text-base">
                 <span className="pr-0.5">You have an account?</span>
-                <Link href="/sign-in" className="text-primary font-bold">
+                <Link
+                  href="/sign-in"
+                  className="text-primary font-bold text-nowrap"
+                >
                   Sign In
                 </Link>
               </p>

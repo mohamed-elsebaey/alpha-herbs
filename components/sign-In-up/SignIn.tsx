@@ -23,9 +23,9 @@ function SubmitButton() {
     <button
       className="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90"
       type="submit"
-      aria-disabled={pending}
+      disabled={pending}
     >
-      Sign In
+      {pending ? "Loading..." : "Sign In"}
     </button>
   );
 }
@@ -38,9 +38,9 @@ function SignIn() {
     setFormStateType(formState);
   }, [formState]);
 
-  const onChangHandler = () =>{
+  const onChangHandler = () => {
     setFormStateType({});
-  }
+  };
 
   return (
     <section className=" bg-gradient-to-r from-primary/10 to-primary2/10 py-28 lg:py-[120px]">
@@ -66,7 +66,11 @@ function SignIn() {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className={`relative w-full rounded-md border ${formStateType?.errors?.email ?  'border-red-500 focus:border-red-500 focus:ring-red-500/50':'border-gray-300 focus:border-primary focus:ring-primary/50'} px-4 py-2 focus:outline-none focus:ring-1`}
+                    className={`relative w-full rounded-md border ${
+                      formStateType?.errors?.email
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/50"
+                        : "border-gray-300 focus:border-primary focus:ring-primary/50"
+                    } px-4 py-2 focus:outline-none focus:ring-1`}
                   />
                   {formStateType?.errors?.email && (
                     <h1 className="text-red-500 absolute">
@@ -79,7 +83,11 @@ function SignIn() {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    className={`relative w-full rounded-md border ${formStateType?.errors?.password ?  'border-red-500 focus:border-red-500 focus:ring-red-500/50':'border-gray-300 focus:border-primary focus:ring-primary/50'} px-4 py-2 focus:outline-none focus:ring-1`}
+                    className={`relative w-full rounded-md border ${
+                      formStateType?.errors?.password
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-500/50"
+                        : "border-gray-300 focus:border-primary focus:ring-primary/50"
+                    } px-4 py-2 focus:outline-none focus:ring-1`}
                   />
                   {formStateType?.errors?.password && (
                     <h1 className="text-red-500 absolute">
@@ -99,7 +107,10 @@ function SignIn() {
               </Link>
               <p className="text-base">
                 <span className="pr-0.5">Don&apos;t have an account?</span>
-                <Link href="/sign-up" className="text-primary font-bold">
+                <Link
+                  href="/sign-up"
+                  className="text-primary font-bold text-nowrap"
+                >
                   Sign Up
                 </Link>
               </p>
