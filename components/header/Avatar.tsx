@@ -204,8 +204,7 @@ const Avatar = ({
             Settings
           </span>
         </Link>
-        <a
-          href="/"
+        <div
           className="text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 cursor-pointer"
           onClick={() => {
             onClick();
@@ -231,7 +230,7 @@ const Avatar = ({
             </svg>
             Log out
           </span>
-        </a>
+        </div>
       </div>
     </>
   );
