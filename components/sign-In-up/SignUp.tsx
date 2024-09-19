@@ -26,7 +26,7 @@ function SubmitButton() {
       type="submit"
       disabled={pending}
     >
-      {pending ? "Lpading..." : "Create an Account"}
+      {pending ? "Loading..." : "Create an Account"}
     </button>
   );
 }
