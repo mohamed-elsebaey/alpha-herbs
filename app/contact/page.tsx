@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Have a question or need assistance? We&apos;re happy to help!",
+  alternates: {
+    canonical: "https://www.alpha-herbs.com/contact",
+  },
 };
 
 function page() {

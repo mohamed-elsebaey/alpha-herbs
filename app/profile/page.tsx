@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Alpha Herbs | profile page",
+  title: "Profile",
   description: "alpha herbs ....... ",
 };
 

@@ -14,11 +14,17 @@ import Template from "./template";
 import { Accessibility } from "@/components/Accessibility";
 import { getUserDataFromDB } from "@/db";
 
-
 export const metadata: Metadata = {
-  title: "Alpha Herbs",
+  // metadataBase : new URL("https://www.alpha-herbs.com/"),
+  title: {
+    default: "Alpha Herbs",
+    template: `%s | Alpha Herbs`,
+  },
   description:
     "Discover the healing power of nature with our wide selection of organic herbs and plants.",
+  // verification: {
+  //   google: "google-site-verification",
+  // },
 };
 
 export default async function RootLayout({
@@ -26,13 +32,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const ifLogin : any = await Accessibility();
-  const {profilePath} : any = await getUserDataFromDB(ifLogin);
+  const ifLogin: any = await Accessibility();
+  const { profilePath }: any = await getUserDataFromDB(ifLogin);
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${open_Sans.className} mx-auto max-w-[1800px]`}>
-        <Header login={ifLogin} profilePath={profilePath}/>
-        {/* Teplate used to add framer motion to evry child */}
+        <Header login={ifLogin} profilePath={profilePath} />
+        {/* Template used to add framer motion to every child */}
         <Template>{children}</Template>
         {/* website speed insights */}
         <SpeedInsights />

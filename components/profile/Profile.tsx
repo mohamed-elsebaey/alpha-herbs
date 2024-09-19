@@ -32,7 +32,6 @@ function Profile({ userData }: { userData: any }) {
   const [country, setCountry] = useState(userData.country);
   const [phone, setPhone] = useState(userData.phone);
 
-
   const handleFirstNameChange = (event: any) => {
     setFirstName(event.target.value.replace(/\s/g, ""));
   };
@@ -96,6 +95,7 @@ function Profile({ userData }: { userData: any }) {
                 Email
               </label>
               <input
+                readOnly
                 type="email"
                 id="email"
                 name="email"

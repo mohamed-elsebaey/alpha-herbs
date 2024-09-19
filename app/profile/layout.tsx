@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Alpha Herbs | profile page",
+  title: {
+    absolute: "Account Settings",
+    template: "%s | Account Settings "
+  },
   description: "alpha herbs ...... ",
 };
 
