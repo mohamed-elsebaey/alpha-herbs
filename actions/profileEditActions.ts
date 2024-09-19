@@ -18,7 +18,7 @@ export async function profileEditActions(prevState: any, formData: FormData) {
   let imageUrl: any = null;
   try {
     if (image.size != 0) {
-      imageUrl = await uploadImage(image);
+      imageUrl = await uploadImage(image, email);
     }
   } catch {
     throw new Error("Saving image failed!");
@@ -26,7 +26,7 @@ export async function profileEditActions(prevState: any, formData: FormData) {
 
   // update dataBase Where Email
   updateUserProfileData(email, fullName, phone, country, imageUrl);
-  revalidatePath("/","layout");
+  revalidatePath("/", "layout");
 
   return {};
 }

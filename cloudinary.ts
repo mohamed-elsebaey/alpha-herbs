@@ -18,14 +18,15 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-export async function uploadImage(image : any) {
+export async function uploadImage(image : any , imagePublicId : any) {
   const imageData = await image.arrayBuffer();
   const mime = image.type;
   const encoding = 'base64';
   const base64Data = Buffer.from(imageData).toString('base64');
   const fileUri = 'data:' + mime + ';' + encoding + ',' + base64Data;
   const result = await cloudinary.uploader.upload(fileUri, {
-    folder: 'AlphaHerbs-usersProfileImages',
+    folder: 'AlphaHerbs-Images/usersProfileImages',
+    public_id: imagePublicId,
   });
   return result.secure_url;
 }
