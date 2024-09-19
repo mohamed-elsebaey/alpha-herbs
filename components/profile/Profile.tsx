@@ -99,7 +99,8 @@ function Profile({ userData }: { userData: any }) {
                 type="email"
                 id="email"
                 name="email"
-                defaultValue={userData.email}
+                value={userData.email}
+                // defaultValue={userData.email}
                 className="bg-primary/5 border border-primary/30 text-primary/90 text-sm rounded-lg focus:ring-primary/50 focus:border-primary/50 block w-full p-2.5 "
                 placeholder="your.email@mail.com"
                 required
