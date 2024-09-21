@@ -12,10 +12,12 @@ export async function profileEditActions(prevState: any, formData: FormData) {
   const phone: any = formData.get("phone");
   const image: any = formData.get("image");
 
+  const pickedImage: any = formData.get("pickedImage");
+  
   const fullName = `${first_name} ${last_name}`;
 
   // if use use CLOUDINARY
-  let imageUrl: any = null;
+  let imageUrl: any = pickedImage;
   try {
     if (image.size != 0) {
       imageUrl = await uploadImage(image, email);

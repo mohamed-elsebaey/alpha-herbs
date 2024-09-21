@@ -26,15 +26,16 @@ export default function ProfileAvatar({ imagePath }: { imagePath: String }) {
     };
   }
   function handleDeleteImageChange() {
-    setPickedImage(null);
+    setPickedImage("/profile-pictures/profile.png");
   }
   return (
     <div className="flex flex-col items-center space-y-5 sm:flex-row sm:space-y-0">
       <img
         className="object-cover w-40 h-40 p-1 rounded-full ring-2 ring-primary/40"
-        src={pickedImage? pickedImage : "/profile-pictures/profile.png"}
+        src={pickedImage}
         alt="avatar"
       />
+      <input hidden type="text"  value={pickedImage} name="pickedImage" readOnly/>
       <input
         className="hidden"
         type="file"
