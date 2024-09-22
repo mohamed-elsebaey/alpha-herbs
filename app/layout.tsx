@@ -15,7 +15,7 @@ import { Accessibility } from "@/components/Accessibility";
 import { getUserDataFromDB } from "@/db";
 
 export const metadata: Metadata = {
-  // metadataBase : new URL("https://www.alpha-herbs.com/"),
+  metadataBase : new URL("https://www.alpha-herbs.com/"),
   title: {
     default: "Alpha Herbs",
     template: `%s | Alpha Herbs`,
