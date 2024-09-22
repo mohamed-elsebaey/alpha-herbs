@@ -5,7 +5,8 @@ import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Sign Up",
-  description: "Sign Up to watch more and more ...",
+  description:
+    "Join the vibrant Alpha Herbs community and explore the world of natural herbs. Share your knowledge with our community, learn from our experts, and discover new recipes daily. Sign up now and start your journey with us!",
 };
 
 async function page() {
