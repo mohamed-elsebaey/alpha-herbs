@@ -5,9 +5,14 @@ import { redirect } from "next/navigation";
 export const metadata: Metadata = {
   title: {
     absolute: "Account Settings",
-    template: "%s | Account Settings "
+    template: "%s | Account Settings ",
   },
   description: "alpha herbs ...... ",
+  
+  robots: {
+    index: false,
+    nocache: true,
+  },
 };
 
 export default async function Layout({
