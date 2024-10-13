@@ -6,7 +6,7 @@ function Hero() {
       <div className="py-4 px-4 md:px-10 max-w-screen-xl mx-auto flex justify-between gap-4 items-center flex-wrap">
         <div className="w-full lg:w-[40%] flex flex-col items-center lg:items-start text-center lg:text-start">
           <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-dark sm:text-[42px] lg:text-[40px] xl:text-5xl text-primary">
-            Discover Organic ' <br />
+            Discover Organic &apos; <br />
             Medicinal Plants.
           </h1>
           <p className="mb-8 max-w-[480px] text-base text-secondary ">
