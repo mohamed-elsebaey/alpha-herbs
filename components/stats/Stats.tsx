@@ -24,7 +24,7 @@ function Stats() {
               ? prevNumbers.satisfactionRate + 1
               : 92,
           teamMembers:
-            prevNumbers.teamMembers < 37
+            prevNumbers.teamMembers < 39
               ? prevNumbers.teamMembers + 1
               : 37,
         }));
