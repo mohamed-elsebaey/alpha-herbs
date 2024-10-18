@@ -26,7 +26,7 @@ function Stats() {
           teamMembers:
             prevNumbers.teamMembers < 39
               ? prevNumbers.teamMembers + 1
-              : 37,
+              : 39,
         }));
       }, 60); // Adjust the interval as needed for desired animation speed
 
