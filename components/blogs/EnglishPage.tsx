@@ -1,24 +1,10 @@
-// "use client";
-// import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import { getAllBlogs } from "@/db";
+import AuthorSection from "./AuthorSection";
 
 async function EnglishPage() {
-  // const [blogs, setBlogs] = useState([]);
-
-  // const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const fetchedBlogs: any = await getAllBlogs();
-  //     setBlogs(fetchedBlogs);
-  //     setIsLoading(false);
-  //   };
-
-  //   fetchData();
-  // }, []);
   const blogs: any = await getAllBlogs();
   return (
     <>
@@ -40,42 +26,55 @@ async function EnglishPage() {
         </div>
       </div>
 
-      <div className="-mx-4 flex flex-wrap">
+      <div className=" flex flex-wrap justify-center ">
         {blogs.map((blog: any) => (
-          <div className="w-full px-4 md:w-1/2 lg:w-1/3" key={blog.id}>
-            <div className="mb-10 w-full">
-              <div className="mb-8 overflow-hidden rounded">
-                <Image
-                  width={350}
-                  height={350}
-                  src={`/images/medicinal-plants/${blog["image-path"]}`}
-                  alt={blog.title}
-                  className="w-full"
-                />
+          <div
+            className="mx-4 relative flex flex-col my-6 bg-white shadow-md border border-gray-200 rounded-lg max-w-md" // max-w-sm
+            key={blog.id}
+          >
+            <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
+              <img
+                src={`/images/medicinal-plants/${blog["image-path"]}`}
+                alt="card-image"
+              />
+            </div>
+            <div className="p-4">
+              <div className="mb-4 rounded-full bg-cyan-600 py-0.5 px-2.5 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">
+                POPULAR
               </div>
-              <div>
-                <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
-                  {blog.date.toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </span>
-                <h3>
-                  <Link
-                    href={`/blog/${blog.title
-                      .toLowerCase()
-                      .replace(/[^\w\s-]/g, "")
-                      .replace(/\s+/g, "-")
-                      .replace(/--+/g, "-")
-                      .replace(/^-+/, "")
-                      .replace(/-+$/, "")}`}
-                    className="mb-4 inline-block text-xl font-semibold  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                  >
-                    {blog.title}
-                  </Link>
-                </h3>
-                <p className="text-base text-secondary ">{blog.description}</p>
+              <Link
+                href={`/blog/${blog.title
+                  .toLowerCase()
+                  .replace(/[^\w\s-]/g, "")
+                  .replace(/\s+/g, "-")
+                  .replace(/--+/g, "-")
+                  .replace(/^-+/, "")
+                  .replace(/-+$/, "")}`}
+              >
+                <h6 className="mb-2 text-slate-800 text-xl font-semibold">
+                  {blog.title}
+                </h6>
+                <p className="text-slate-600 leading-normal font-light">
+                  {blog.description}
+                </p>
+              </Link>
+            </div>
+
+            <div className="flex items-center justify-between p-4">
+              <div className="flex items-center">
+                <AuthorSection id={blog.author_id} />
+                <div className="flex flex-col ml-3 text-sm">
+                  <span className="text-slate-800 font-semibold">
+                    {blog.author}
+                  </span>
+                  <span className="text-slate-600">
+                    {blog.date.toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
               </div>
             </div>
           </div>

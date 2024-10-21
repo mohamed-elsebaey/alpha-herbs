@@ -44,6 +44,11 @@ export async function getAllBlogs() {
   const blogs = await executeQuery("SELECT * FROM blogs");
   return blogs;
 }
+export async function getAuthorDataById(id:any) {
+  const authorData = await executeQuery("SELECT name,profilePath FROM users WHERE id = ?" , [id]);
+  return authorData;
+}
+
 
 // --------------------------------------------------------------
 
