@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Heart } from "lucide-react";
 
 import { getAllBlogs } from "@/db";
 import AuthorSection from "./AuthorSection";
@@ -29,7 +29,7 @@ async function EnglishPage() {
       <div className=" flex flex-wrap justify-center ">
         {blogs.map((blog: any) => (
           <div
-            className="mx-4 relative flex flex-col my-6 bg-white shadow-md border border-gray-200 rounded-lg max-w-md" // max-w-sm
+            className="mx-4 relative flex flex-col my-6 bg-white shadow-md border border-gray-200 hover:shadow-primary rounded-lg max-w-md" // max-w-sm
             key={blog.id}
           >
             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
@@ -75,6 +75,28 @@ async function EnglishPage() {
                     })}
                   </span>
                 </div>
+              </div>
+              <div className="flex ">
+                <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                  <Heart size={18} />
+                  <span className="ml-1">0</span>
+                </span>
+                <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
+                  <svg
+                    className="h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                    ></path>
+                  </svg>
+                  <span className="ml-1">0 Comments</span>
+                </span>
               </div>
             </div>
           </div>
