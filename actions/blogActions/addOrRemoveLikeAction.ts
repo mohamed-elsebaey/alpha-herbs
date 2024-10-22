@@ -11,5 +11,5 @@ export async function addOrRemoveLikeAction(articleId: any) {
 
   const likeState = await getArticleLikeStateByUserIdArticleId(userId[0].id,articleId)
 
-  revalidatePath('/blog')
+  revalidatePath("/blog")
 }
