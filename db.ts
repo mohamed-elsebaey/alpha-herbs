@@ -38,17 +38,43 @@ function executeQuery<T>(query: string, values?: any[]): Promise<T[]> {
   });
 }
 
+// executeQuery("CREATE TABLE blogs_likes ( id INT AUTO_INCREMENT PRIMARY KEY,user_id INT,article_id INT,FOREIGN KEY (user_id) REFERENCES users(id),FOREIGN KEY (article_id) REFERENCES blogs(id));");
+
 // step 3#
 
 export async function getAllBlogs() {
   const blogs = await executeQuery("SELECT * FROM blogs");
   return blogs;
 }
-export async function getAuthorDataById(id:any) {
-  const authorData = await executeQuery("SELECT name,profilePath FROM users WHERE id = ?" , [id]);
+export async function getAuthorDataById(id: any) {
+  const authorData = await executeQuery(
+    "SELECT name,profilePath FROM users WHERE id = ?",
+    [id]
+  );
   return authorData;
 }
+export async function getNamesOfThoseWhoLikedTheArticleByBlogId(id: any) {
+  const namesOfThoseWhoLikedTheArticle: any = await executeQuery(
+    "SELECT users.name,users.email FROM blogs_likes INNER JOIN users ON blogs_likes.user_id = users.id WHERE blogs_likes.article_id = ?",
+    [id]
+  );
+  return namesOfThoseWhoLikedTheArticle;
+}
 
+export async function getUserIdByEmail(userEmail: any) {
+  const userId = await executeQuery(
+    "SELECT id FROM users WHERE email = ?",[userEmail]
+  );
+  return userId
+}
+export async function getArticleLikeStateByUserIdArticleId(userId: any , articleId: any) {
+  const likeState = await executeQuery("SELECT id FROM blogs_likes WHERE user_id = ? AND article_id = ? ",[userId,articleId]);
+  if(likeState.length == 0) {
+    executeQuery("INSERT INTO blogs_likes (user_id,article_id) VALUES (?,?)",[userId,articleId]);
+  }else{
+    executeQuery("DELETE FROM blogs_likes WHERE user_id = ? AND article_id = ? ",[userId,articleId]);
+  }
+}
 
 // --------------------------------------------------------------
 

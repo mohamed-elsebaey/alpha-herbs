@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Heart } from "lucide-react";
 
 import { getAllBlogs } from "@/db";
-import AuthorSection from "./AuthorSection";
+import AuthorSection from "./card/AuthorSection";
+import LikesSection from "./card/LikesSection";
 
 async function EnglishPage() {
   const blogs: any = await getAllBlogs();
@@ -76,28 +76,7 @@ async function EnglishPage() {
                   </span>
                 </div>
               </div>
-              <div className="flex ">
-                <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-                  <Heart size={18} />
-                  <span className="ml-1">0</span>
-                </span>
-                <span className="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-                  <svg
-                    className="h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                    ></path>
-                  </svg>
-                  <span className="ml-1 flex">0 <span className="hidden sm:block">&nbsp;Comments</span></span>
-                </span>
-              </div>
+              <LikesSection id={blog.id}/>
             </div>
           </div>
         ))}
