@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 
 export async function addOrRemoveLikeAction(articleId: any) {
   const userEmail: any = await Accessibility();
-  if(userEmail){
+  if(!userEmail){
     return;
   }
   const userId: any = await getUserIdByEmail(userEmail);
