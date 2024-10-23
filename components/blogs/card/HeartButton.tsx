@@ -20,11 +20,11 @@ function HeartButton({
   const onChangeHeartState = async () => {
     const isLogin = await Accessibility();
     if (isLogin) {
-      // setLiked(() => !liked);
-      // setLikesNumber(liked ? likesNumber - 1 : likesNumber + 1);
+      setLiked(() => !liked);
+      setLikesNumber(liked ? likesNumber - 1 : likesNumber + 1);
       addOrRemoveLikeAction(articleId);
     } else {
-
+      alert('You need to log in first to be able to like this article.');
     }
   };
   return (
