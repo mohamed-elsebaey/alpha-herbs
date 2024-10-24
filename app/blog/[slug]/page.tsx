@@ -1,4 +1,5 @@
 import Mint from "@/components/blogs/article/Mint";
+import CommentsSection from "@/components/blogs/comments/CommentsSection";
 import React from "react";
 
 interface BlogPostPageProps {
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 }
 
 function BlogPostPage({ params }: BlogPostPageProps) {
+  let articleId = 0;
   let data = (
     <>
       <h1 className="font-bold text-6xl text-primary my-5">
@@ -37,6 +39,7 @@ function BlogPostPage({ params }: BlogPostPageProps) {
 
   if (params.slug == "mint-natures-refreshing-remedy-for-digestion-and-more") {
     data = <Mint />;
+    articleId = 1;
   }
 
   return (
@@ -55,6 +58,8 @@ function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </section>
+      <hr className="text-primary" />
+      <CommentsSection articleId={articleId} />
       <hr className="text-primary" />
     </>
   );

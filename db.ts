@@ -53,6 +53,7 @@ export async function getAuthorDataById(id: any) {
   );
   return authorData;
 }
+
 export async function getNamesOfThoseWhoLikedTheArticleByBlogId(id: any) {
   const namesOfThoseWhoLikedTheArticle: any = await executeQuery(
     "SELECT users.name,users.email FROM blogs_likes INNER JOIN users ON blogs_likes.user_id = users.id WHERE blogs_likes.article_id = ?",
@@ -61,20 +62,63 @@ export async function getNamesOfThoseWhoLikedTheArticleByBlogId(id: any) {
   return namesOfThoseWhoLikedTheArticle;
 }
 
-export async function getUserIdByEmail(userEmail: any) {
-  const userId = await executeQuery(
-    "SELECT id FROM users WHERE email = ?",[userEmail]
+export async function getAllCommentsOnArticleByBlogId(id: any) {
+  const numberOfCommentsOnTheArticle = await executeQuery(
+    "SELECT COUNT(*) AS total_comments FROM blogs_comments WHERE article_id = ?",
+    [id]
   );
-  return userId
+  return numberOfCommentsOnTheArticle;
 }
-export async function getArticleLikeStateByUserIdArticleId(userId: any , articleId: any) {
-  const likeState = await executeQuery("SELECT id FROM blogs_likes WHERE user_id = ? AND article_id = ? ",[userId,articleId]);
-  if(likeState.length == 0) {
-    executeQuery("INSERT INTO blogs_likes (user_id,article_id) VALUES (?,?)",[userId,articleId]);
-  }else{
-    executeQuery("DELETE FROM blogs_likes WHERE user_id = ? AND article_id = ? ",[userId,articleId]);
+export async function grtAllUserCommentsWithTheirNamesAndProfilePicturePathByBlogId(
+  id: any
+) {
+  const AllUserCommentsWithTheirNamesAndProfilePicturePath = await executeQuery(
+    "SELECT blogs_comments.id,blogs_comments.comment,blogs_comments.created_at,users.name,users.profilePath FROM blogs_comments INNER JOIN users ON blogs_comments.user_id = users.id WHERE blogs_comments.article_id = ?",
+    [id]
+  );
+  return AllUserCommentsWithTheirNamesAndProfilePicturePath;
+}
+// +++++++
+
+export async function getUserIdByEmail(userEmail: any) {
+  const userId = await executeQuery("SELECT id FROM users WHERE email = ?", [
+    userEmail,
+  ]);
+  return userId;
+}
+export async function getArticleLikeStateByUserIdArticleId(
+  userId: any,
+  articleId: any
+) {
+  const likeState = await executeQuery(
+    "SELECT id FROM blogs_likes WHERE user_id = ? AND article_id = ? ",
+    [userId, articleId]
+  );
+  if (likeState.length == 0) {
+    executeQuery("INSERT INTO blogs_likes (user_id,article_id) VALUES (?,?)", [
+      userId,
+      articleId,
+    ]);
+  } else {
+    executeQuery(
+      "DELETE FROM blogs_likes WHERE user_id = ? AND article_id = ? ",
+      [userId, articleId]
+    );
   }
 }
+
+// +++++++
+export async function addUserCommentToArticleByUserIdArticleId(
+  userId: any,
+  articleId: any,
+  userComment : any
+) {
+  await executeQuery(
+    "INSERT INTO blogs_comments(user_id, article_id, comment) VALUES (?, ?, ?)",
+    [userId, articleId, userComment]
+  );
+}
+
 
 // --------------------------------------------------------------
 
@@ -158,6 +202,5 @@ export async function updateUserProfileData(
     [name, phone, country, profilePath, email]
   );
 
-  
   return UpdateData;
 }

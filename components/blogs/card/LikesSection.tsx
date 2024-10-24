@@ -1,9 +1,10 @@
-import { getNamesOfThoseWhoLikedTheArticleByBlogId } from "@/db";
+import { getAllCommentsOnArticleByBlogId, getNamesOfThoseWhoLikedTheArticleByBlogId } from "@/db";
 import { Accessibility } from "../../Accessibility";
 import HeartButton from "./HeartButton";
 
 async function LikesSection({ id }: { id: any }) {
   const total_names: any = await getNamesOfThoseWhoLikedTheArticleByBlogId(id);
+  const total_comments : any = await getAllCommentsOnArticleByBlogId(id); 
   const email: any = await Accessibility();
   
   const userIsLiked = total_names.find((user: any) => user.email === email);
@@ -27,7 +28,7 @@ async function LikesSection({ id }: { id: any }) {
           ></path>
         </svg>
         <span className="ml-1 flex">
-          0 <span className="hidden sm:block">&nbsp;Comments</span>
+          {total_comments[0].total_comments}<span className="hidden sm:block">&nbsp;Comments</span>
         </span>
       </span>
     </div>
