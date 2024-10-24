@@ -21,8 +21,6 @@ function CommentForm() {
   const blogId = 1;
   const [formState, formAction] = useFormState(addCommentAction, null);
 
-  formState ? alert('Log in to be able to add comments.') : ""
-
   return (
     <form className="mb-6" action={formAction}>
       <div className="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border">
