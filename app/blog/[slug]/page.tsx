@@ -8,11 +8,6 @@ interface BlogPostPageProps {
   };
 }
 
-// export const metadata = {
-//   title: "soon ...",
-//   description: "Explore the world of medicinal and aromatic plants...",
-// };
-
 export async function generateMetadata({ params }: BlogPostPageProps) {
   return {
     title: params.slug,
@@ -59,7 +54,7 @@ function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
       <hr className="text-primary" />
-      <CommentsSection articleId={articleId} />
+      {articleId == 1 && <CommentsSection articleId={articleId} />}
       <hr className="text-primary" />
     </>
   );
