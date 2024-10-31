@@ -11,15 +11,15 @@ function WeBeganWith() {
         <div className="-mx-4 flex flex-wrap">
           <WeBeganList
             number={1}
-            label="Cultivation, production, cleaning, processing, sterilization, packing and exporting medicinal and aromatic."
+            label="Cultivation, Production, Cleaning, Processing, Sterilization, Packing and Exporting medicinal and aromatic plants."
           />
           <WeBeganList
             number={2}
-            label="We are specialized in production of pure dried leaves & some flowers."
+            label="We are Specialized in Production of organic pure dried leaves & some flowers."
           />
           <WeBeganList
             number={3}
-            label="Our purity rates of finished products reach over 99.98."
+            label="Our purity rates of finished products reach over 99.98 %."
           />
           <WeBeganList
             number={4}
