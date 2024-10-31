@@ -14,9 +14,9 @@ function Footer() {
               href="/"
               className="flex items-center gap-2 text-primary font-mono"
             >
-              <Image src={logo} alt="Alpha Herbs" width={25} />
+              <Image src={logo} alt="Alpha Herb" width={25} />
               <span className="self-center text-2xl font-bold whitespace-nowrap">
-                Alpha Herbs
+                Alpha Herb
               </span>
             </Link>
             <p className="mb-7 ml-3 text-base w-[90%] ">
@@ -167,7 +167,7 @@ function Footer() {
                 </svg>
               </Link>
             </div>
-            <p className="text-base  ">&copy; 2025 Alpha Herbs.</p>
+            <p className="text-base  ">&copy; 2025 Alpha Herb.</p>
           </div>
         </div>
       </div>

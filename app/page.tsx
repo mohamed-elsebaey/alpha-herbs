@@ -1,4 +1,4 @@
-// Alpha Herbs Main Page
+// Alpha Herb Main Page
 
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/newsletter/Newsletter";
@@ -9,9 +9,9 @@ import Images from "@/components/Images";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Alpha Herbs",
+  title: "Alpha Herb",
   description:
-    "Build your natural products with Alpha Herbs. We are a leading supplier of bulk medicinal and aromatic herbs. We provide customized solutions to meet your needs, whether you are a functional food producer, herbal medicine manufacturer, or cosmetics company. Our product quality is our guarantee of your success.",
+    "Build your natural products with Alpha Herb. We are a leading supplier of bulk medicinal and aromatic herbs. We provide customized solutions to meet your needs, whether you are a functional food producer, herbal medicine manufacturer, or cosmetics company. Our product quality is our guarantee of your success.",
 };
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Hero />
       <Video />
-      <Images />
+      {/* <Images /> */}
       <Stats />
       <Products />
       <Newsletter />

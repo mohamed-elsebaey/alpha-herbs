@@ -1,15 +1,16 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import WeBeganWith from "./WeBeganWith";
 
 function AboutUs() {
   return (
     // Services Section Start
     <section className="overflow-hidden bg-white pb-12 pt-20 lg:pb-[90px] lg:pt-[70px]">
       <div className="py-4 px-4 md:px-10 max-w-screen-xl mx-auto">
-        <div className="-mx-4 flex flex-wrap items-center justify-between">
+        <div className="-mx-4 flex md:flex-row-reverse flex-wrap flex-col-reverse items-center justify-between">
           <div className="w-full px-4 lg:w-6/12">
-            <div className="-mx-3 flex items-center sm:-mx-4">
+            <div className="-mx-3 flex items-center flex-row-reverse sm:-mx-4">
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
                 <div className="py-3 sm:py-4">
                   <Image
@@ -39,7 +40,7 @@ function AboutUs() {
                     alt=""
                     className="w-full rounded-2xl"
                   />
-                  <span className="absolute -bottom-7 -right-7 z-[-1]">
+                  <span className="absolute -bottom-7 -left-7 z-[-1]">
                     <svg
                       width="134"
                       height="106"
@@ -619,29 +620,27 @@ function AboutUs() {
                 About US
               </span>
               <h2 className="text-3xl font-bold text-primary/90 sm:text-[40px]/[48px] ">
-                Alpha Herbs:
-                <br />
+                Alpha Herb:
               </h2>
               <h2 className="mb-5 text-xl font-semibold text-primary/90 sm:text-[40px]/[48px] ">
                 Organic Farming for a Healthier World.
               </h2>
               <p className="mb-5 text-base text-secondary">
-                <strong>Alpha Herbs</strong> is an Egyptian agricultural company
-                established in
-                <strong>2018</strong> with a passion for organic farming. Our
-                <strong> 630-hectare</strong> farm in Farafra, New Valley
-                Governorate, serves as our laboratory for cultivating products
-                that are in harmony with nature and beneficial to human health.
+                <strong>ALPHA HERB</strong> is an Egyptian agricultural company
+                established at <strong>2018</strong> We established our farm
+                there, away from pollution, on the land of the Western Desert of
+                Egypt we have estabilished our own farm about ({" "}
+                <strong>630 hectares</strong> ) ,at farafra ,new valley
+                governorate, Egypt
               </p>
               <p className="mb-8 text-base text-secondary">
-                We believe that organic farming is the future of agriculture. It
-                is a way of producing food that is not only healthier but also
-                more sustainable. By choosing <strong>Alpha Herbs</strong>, you
-                are supporting a company that is dedicated to making a positive
-                impact on the world.
+                we are working on the arts of organic farming for purpose of
+                manufacturing & exporting organic products without any residuals
+                nor pesticides so, our farm products is in harmony with the
+                universal world nature & befitting of human being.
               </p>
               <Link
-                href="\"
+                href="/"
                 className="inline-flex items-center justify-center rounded-md border border-transparent bg-primary hover:bg-primary/85 px-7 py-3 text-center text-base font-medium text-white hover:bg-opacity-90"
               >
                 Get Started
@@ -649,6 +648,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
+        <WeBeganWith/>
       </div>
     </section>
     // Services Section End

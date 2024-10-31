@@ -34,9 +34,9 @@ function Header({
             className="flex items-center gap-2 text-primary font-mono"
             onClick={closeMenueHandler}
           >
-            <Image src={logo} alt="Alpha Herbs" width={25} />
+            <Image src={logo} alt="Alpha Herb" width={25} />
             <span className="self-center text-2xl font-bold whitespace-nowrap">
-              Alpha Herbs
+              Alpha Herb
             </span>
           </Link>
           {/* *************** Menu Icon in small devices ************** */}
@@ -93,6 +93,15 @@ function Header({
                   onClick={closeMenueHandler}
                 >
                   FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-farms"
+                  className="py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
+                  onClick={closeMenueHandler}
+                >
+                  Our Farms
                 </Link>
               </li>
               <li className="mt-2 md:mt-0">

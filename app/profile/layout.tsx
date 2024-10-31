@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: "Account Settings",
     template: "%s | Account Settings ",
   },
-  description: "alpha herbs ...... ",
+  description: "alpha herb ...... ",
   
   robots: {
     index: false,

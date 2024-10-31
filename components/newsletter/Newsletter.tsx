@@ -10,7 +10,7 @@ function Newsletter() {
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative z-10 px-8 py-10 sm:p-14 lg:pb-24">
                 <h2 className="mb-6 text-3xl font-semibold text-white sm:text-4xl md:text-[40px]/[48px] font-mono">
-                  Alpha Herbs
+                  Alpha Herb
                 </h2>
                 <p className="max-w-[300px] text-base text-white">
                   Be the first to know! Subscribe now to receive our latest

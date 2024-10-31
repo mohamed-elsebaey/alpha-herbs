@@ -17,8 +17,8 @@ import { getUserDataFromDB } from "@/db";
 export const metadata: Metadata = {
   metadataBase : new URL("https://www.alpha-herbs.com/"),
   title: {
-    default: "Alpha Herbs",
-    template: `%s | Alpha Herbs`,
+    default: "Alpha Herb",
+    template: `%s | Alpha Herb`,
   },
   description:
     "Discover the healing power of nature with our wide selection of organic herbs and plants.",

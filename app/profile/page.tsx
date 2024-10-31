@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Profile",
-  description: "alpha herbs ....... ",
+  description: "alpha herb ....... ",
 };
 
 async function page() {

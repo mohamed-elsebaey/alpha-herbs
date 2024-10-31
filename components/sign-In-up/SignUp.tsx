@@ -55,9 +55,9 @@ function SignUp() {
                   href="/"
                   className="flex flex-col items-center justify-center gap-2 text-primary font-mono"
                 >
-                  <Image src={logo} alt="Alpha Herbs" width={35} />
+                  <Image src={logo} alt="Alpha Herb" width={35} />
                   <span className="self-center text-2xl font-bold whitespace-nowrap">
-                    Alpha Herbs
+                    Alpha Herb
                   </span>
                 </Link>
               </div>
