@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      {/* <OurFarms/> */}
+      <OurFarms/>
     </>
   );
 }

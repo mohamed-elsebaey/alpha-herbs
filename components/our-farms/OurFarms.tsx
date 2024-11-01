@@ -1,151 +1,30 @@
-import React from "react";
+import Video from "next-video";
+import getStarted from "/videos/NamaaEn.mp4";
+import Link from "next/link";
 
 function OurFarms() {
   return (
-    // <div className="flex min-h-screen w-screen flex-col bg-gradient-to-l from-slate-800 to-violet-900">
-    //   <header className="relative flex w-screen max-w-screen-xl flex-col overflow-hidden px-4 py-4 text-white md:mx-auto md:flex-row md:items-center">
-    //     <a
-    //       href="#"
-    //       className="flex cursor-pointer items-center whitespace-nowrap text-2xl font-black"
-    //     >
-    //       <span className="mr-2 text-4xl text-violet-500">
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           aria-hidden="true"
-    //           role="img"
-    //           width="1em"
-    //           height="1em"
-    //           preserveAspectRatio="xMidYMid meet"
-    //           viewBox="0 0 24 24"
-    //         >
-    //           <path
-    //             fill="currentColor"
-    //             d="M6.925 16.875Q5.2 16.225 4.1 14.713Q3 13.2 3 11.25q0-1.975.938-3.513Q4.875 6.2 6 5.15q1.125-1.05 2.062-1.6L9 3v2.475q0 .625.45 1.062q.45.438 1.075.438q.35 0 .65-.15q.3-.15.5-.425L12 6q.95.55 1.625 1.35t1.025 1.8l-1.675 1.675q-.05-.6-.287-1.175q-.238-.575-.638-1.05q-.35.2-.738.287q-.387.088-.787.088q-1.1 0-1.987-.612Q7.65 7.75 7.25 6.725q-.95.925-1.6 2.062Q5 9.925 5 11.25q0 .775.275 1.462q.275.688.75 1.213q.05-.5.287-.938q.238-.437.588-.787L9 10.1l2.15 2.1q.05.05.1.125t.1.125l-1.425 1.425q-.05-.075-.087-.125q-.038-.05-.088-.1L9 12.925l-.7.7q-.125.125-.212.287q-.088.163-.088.363q0 .3.175.537q.175.238.45.363ZM9 10.1Zm0 0ZM7.4 22L6 20.6L19.6 7L21 8.4L17.4 12H21v2h-5.6l-.5.5l1.5 1.5H21v2h-2.6l2.1 2.1l-1.4 1.4l-2.1-2.1V22h-2v-4.6l-1.5-1.5l-.5.5V22h-2v-3.6Z"
-    //           />
-    //         </svg>
-    //       </span>
-    //       streamio
-    //     </a>
-    //     <input type="checkbox" className="peer hidden" id="navbar-open" />
-    //     <label
-    //       className="absolute top-5 right-7 cursor-pointer md:hidden"
-    //       htmlFor="navbar-open"
-    //     >
-    //       <svg
-    //         xmlns="http://www.w3.org/2000/svg"
-    //         className="h-6 w-6"
-    //         fill="none"
-    //         viewBox="0 0 24 24"
-    //         stroke="currentColor"
-    //         strokeWidth="2"
-    //       >
-    //         <path
-    //           strokeLinecap="round"
-    //           strokeLinejoin="round"
-    //           d="M4 6h16M4 12h16M4 18h16"
-    //         />
-    //       </svg>
-    //     </label>
-    //     <nav
-    //       aria-label="Header Navigation"
-    //       className="flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all peer-checked:mt-8 peer-checked:max-h-56 md:ml-24 md:max-h-full md:flex-row md:items-start"
-    //     >
-    //       <ul className="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0">
-    //         <li className="font-bold md:mr-12">
-    //           <a href="#">Pricing</a>
-    //         </li>
-    //         <li className="md:mr-12">
-    //           <a href="#">Features</a>
-    //         </li>
-    //         <li className="md:mr-12">
-    //           <a href="#">Support</a>
-    //         </li>
-    //         <li className="md:mr-12">
-    //           <button className="rounded-full border-2 border-white px-6 py-1 text-white transition-colors hover:bg-violet-500 hover:text-white">
-    //             Login
-    //           </button>
-    //         </li>
-    //       </ul>
-    //     </nav>
-    //   </header>
-
-    //   <div className="sm:my-auto mx-auto px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
-    //     <div className="flex flex-col items-center justify-between lg:flex-row">
-    //       <div className="mb-10 lg:mb-0 lg:max-w-lg lg:pr-5">
-    //         <div className="mb-6 max-w-xl">
-    //           <div>
-    //             <p className="bg-teal-accent-400 mb-2 inline-block rounded-full px-3 text-xs font-semibold uppercase tracking-wider text-gray-50">
-    //               New and improved
-    //             </p>
-    //           </div>
-    //           <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold leading-snug tracking-tight text-white sm:text-5xl sm:leading-snug">
-    //             Streaming platform for
-    //             <span className="my-1 inline-block rounded bg-white px-2 text-violet-600">
-    //               fitness
-    //             </span>
-    //             instructors
-    //           </h2>
-    //           <p className="text-base text-gray-200">
-    //             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-    //             accusantium doloremque it.
-    //           </p>
-    //         </div>
-    //         <div className="flex flex-col items-center md:flex-row">
-    //           <a
-    //             href="/"
-    //             className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-violet-700 px-6 font-medium tracking-wide text-white shadow-md transition duration-200 hover:bg-violet-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto"
-    //           >
-    //             Stream Now{" "}
-    //           </a>
-    //           <a
-    //             href="/"
-    //             aria-label=""
-    //             className="inline-flex items-center font-semibold text-gray-50 underline-offset-2 transition-colors duration-200 hover:underline"
-    //           >
-    //             Watch how it works
-    //           </a>
-    //         </div>
-    //       </div>
-    //       <div className="relative shadow-xl shadow-violet-700 lg:w-1/2">
-    //         <img
-    //           className="h-56 w-full rounded object-cover shadow-lg sm:h-96"
-    //           src="https://img1.wsimg.com/isteam/stock/14366/:/rs=w:1920,m"
-    //           alt=""
-    //         />
-    //         <a
-    //           href="/"
-    //           aria-label="Play Video"
-    //           className="group absolute inset-0 flex h-full w-full items-center justify-center bg-gray-900 bg-opacity-30 transition-colors duration-300 hover:bg-opacity-10"
-    //         >
-    //           <div className="flex h-16 w-16 transform items-center justify-center rounded-full bg-gray-100 shadow-2xl transition duration-300 group-hover:scale-110">
-    //             <svg
-    //               className="w-10 text-gray-900"
-    //               fill="currentColor"
-    //               viewBox="0 0 24 24"
-    //             >
-    //               <path d="M16.53,11.152l-8-5C8.221,5.958,7.833,5.949,7.515,6.125C7.197,6.302,7,6.636,7,7v10 c0,0.364,0.197,0.698,0.515,0.875C7.667,17.958,7.833,18,8,18c0.184,0,0.368-0.051,0.53-0.152l8-5C16.822,12.665,17,12.345,17,12 S16.822,11.335,16.53,11.152z"></path>
-    //             </svg>
-    //           </div>
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <section className="relative text-white">
-      <div className="bg-gradient-to-r bg-teal-200 py-10 sm:py-16 md:py-36 md:pb-60">
+      <div className="bg-gradient-to-r bg-primary2 py-10 sm:py-16 md:py-36 md:pb-60">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:flex lg:px-8">
           <div className="relative mx-auto my-auto flex flex-col items-center text-center">
-            <h2 className="text-3xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              Now Free for{" "}
-              <span className="whitespace-nowrap">Early Birds</span>
+            <h2 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+              These are not generic photos, it is our reality. Within our farms.
+              Talking about us.
             </h2>
             <p className="mt-4 font-medium md:text-xl">
-              Everyone who signs up before the beta launch, will get 6 months
-              free
+              Since 2018, we have turned the desert into cultivated land. By
+              carefully choosing our location away from any polluted areas, we
+              started with an area of 1503 acres far in the New Valley
+              governorate.
             </p>
 
             <div className="sm mt-8 flex flex-col sm:flex-row sm:space-x-4 sm:px-0 lg:mt-12">
-              <button className="relative mt-4 rounded-lg bg-orange-500 px-6 py-2 font-medium text-white shadow transition hover:bg-orange-600">
+              <Link
+                href="https://namaa-invest.com/"
+                target="_blank"
+                className="relative mt-4 rounded-lg bg-orange-500 px-6 py-2 font-medium text-white shadow transition hover:bg-orange-600"
+              >
                 <div className="-scale-x-100 absolute left-0 -bottom-10 hidden h-10 w-10 -rotate-12 md:inline-flex">
                   <svg
                     viewBox="0 0 82 35"
@@ -166,9 +45,9 @@ function OurFarms() {
                     />
                   </svg>
                 </div>
-                Try for free
-              </button>
-              <button className="mt-4 flex items-center rounded-lg border-2 border-white px-6 py-2 font-medium transition hover:border-transparent hover:bg-gray-800 hover:text-white">
+                Visit Website
+              </Link>
+              <button className="mt-4 flex items-center rounded-lg border-2 border-white px-6 py-2 font-medium transition hover:border-transparent hover:bg-primary hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-2 h-5 w-5"
@@ -188,7 +67,7 @@ function OurFarms() {
         </div>
       </div>
       <div className="group relative mx-auto -mt-40 mb-20 hidden w-full max-w-3xl overflow-hidden rounded-xl border-8 border-white bg-emerald-400 shadow-lg md:block">
-        <div className="absolute inset-0 z-10 flex cursor-pointer items-center justify-center duration-500 hover:scale-110 hover:text-white">
+        {/* <div className="absolute inset-0 z-10 flex cursor-pointer items-center justify-center duration-500 hover:scale-110 hover:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-20 w-20 rounded-full bg-emerald-400 p-2"
@@ -206,7 +85,8 @@ function OurFarms() {
           className="group-hover:opacity-50 h-full w-full opacity-30 duration-500"
           src="https://img1.wsimg.com/isteam/stock/14366/:/rs=w:1920,m"
           alt=""
-        />
+        /> */}
+        <Video src={getStarted} accentColor="#115934"/>
       </div>
     </section>
   );
