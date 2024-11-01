@@ -1,11 +1,11 @@
 import Video from "next-video";
-import getStarted from "/videos/NamaaEn.mp4";
+import getStarted from "/videos/NamaaAr.mp4";
 import Link from "next/link";
 
 function OurFarms() {
   return (
     <section className="relative text-white">
-      <div className="bg-gradient-to-r bg-primary2 py-10 sm:py-16 md:py-36 md:pb-60">
+      <div className="bg-gradient-to-r bg-primary2 py-24 md:py-36 md:pb-60">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:flex lg:px-8">
           <div className="relative mx-auto my-auto flex flex-col items-center text-center">
             <h2 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
@@ -47,7 +47,7 @@ function OurFarms() {
                 </div>
                 Visit Website
               </Link>
-              <button className="mt-4 flex items-center rounded-lg border-2 border-white px-6 py-2 font-medium transition hover:border-transparent hover:bg-primary hover:text-white">
+              <Link href='https://namaa-invest.com/about-us' target="_blank" className="mt-4 flex items-center rounded-lg border-2 border-white px-6 py-2 font-medium transition hover:border-transparent hover:bg-primary hover:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="mr-2 h-5 w-5"
@@ -61,7 +61,7 @@ function OurFarms() {
                   />
                 </svg>
                 Watch the demo
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -86,7 +86,17 @@ function OurFarms() {
           src="https://img1.wsimg.com/isteam/stock/14366/:/rs=w:1920,m"
           alt=""
         /> */}
-        <Video src={getStarted} accentColor="#115934"/>
+        {/* <Video src={getStarted} accentColor="#115934"/> */}
+        <iframe
+          src="https://player.cloudinary.com/embed/?public_id=Alphaherb-videos%2FnamaaEn&cloud_name=dyryptpqq&player[showLogo]=false"
+          width="755"
+          height="425"
+          className="bg-white"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          // undefined
+          // allowfullscreen
+          // frameborder="0"
+        ></iframe>
       </div>
     </section>
   );
