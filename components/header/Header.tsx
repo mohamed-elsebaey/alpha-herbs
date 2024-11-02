@@ -58,7 +58,7 @@ function Header({
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="w-full font-medium flex flex-col gap-5 md:gap-8 items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-transparent ">
+            <ul className="w-full font-medium flex flex-col gap-5 md:gap-4 lg:gap-8 items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-transparent ">
               <li>
                 <Link
                   href="/"
@@ -79,6 +79,25 @@ function Header({
               </li>
               <li>
                 <Link
+                  href="/products"
+                  className="py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
+                  onClick={closeMenueHandler}
+                >
+                  Products
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/our-farms"
+                  className="py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
+                  onClick={closeMenueHandler}
+                >
+                  Our Farms
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/blog"
                   className="py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
                   onClick={closeMenueHandler}
@@ -93,15 +112,6 @@ function Header({
                   onClick={closeMenueHandler}
                 >
                   FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/our-farms"
-                  className="py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-teal-700 md:p-0 "
-                  onClick={closeMenueHandler}
-                >
-                  Our Farms
                 </Link>
               </li>
               <li className="mt-2 md:mt-0">
@@ -128,7 +138,10 @@ function Header({
                     Sign In
                   </Link>
                 ) : (
-                  <Avatar onClick={closeMenueHandler} profilePath={profilePath}/>
+                  <Avatar
+                    onClick={closeMenueHandler}
+                    profilePath={profilePath}
+                  />
                 )}
               </li>
             </ul>

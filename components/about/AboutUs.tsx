@@ -8,7 +8,7 @@ function AboutUs() {
     // Services Section Start
     <section className="overflow-hidden bg-white pb-12 pt-20 lg:pb-[90px] lg:pt-[70px]">
       <div className="py-4 px-4 md:px-10 max-w-screen-xl mx-auto">
-        <div className="-mx-4 flex md:flex-row-reverse flex-wrap flex-col-reverse items-center justify-between">
+        <div className="-mx-4 flex md:flex-row-reverse flex-wrap items-center justify-between">
           <div className="w-full px-4 lg:w-6/12">
             <div className="-mx-3 flex items-center flex-row-reverse sm:-mx-4">
               <div className="w-full px-3 sm:px-4 xl:w-1/2">

@@ -1,4 +1,3 @@
-import OurFarms from "@/components/our-farms/OurFarms";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,14 +5,13 @@ export const metadata: Metadata = {
   description:
     "......",
   alternates: {
-    canonical: "https://www.alpha-herbs.com/our-farms",
+    canonical: "https://www.alpha-herbs.com/products",
   },
 };
 
 function page() {
   return (
     <>
-      <OurFarms/>
     </>
   );
 }
