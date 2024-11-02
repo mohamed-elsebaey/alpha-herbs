@@ -6,7 +6,7 @@ import ORGANIC from "@/public/certificates/ORGANIC.png";
 
 function Certificates() {
   return (
-    <div className="">
+    <div className="py-20">
       <div className="py-4 px-4 md:px-10 max-w-screen-xl mx-auto w-full">
         <div className="flex flex-wrap items-center">
           <div className="w-full max-w-full flex-shrink-0 lg:mt-2 lg:w-1/3 lg:flex-none">
