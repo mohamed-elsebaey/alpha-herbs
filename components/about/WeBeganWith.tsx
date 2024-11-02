@@ -4,7 +4,7 @@ function WeBeganWith() {
   return (
     <>
       {/* <!-- ====== Services Section Start --> */}
-      <div className="container mx-auto mt-10 border-t-2">
+      <div className="container mx-auto mt-10 pb-5 border-y-2">
         <h2 className="my-8 text-3xl font-bold text-primary/90 sm:text-4xl">
           We began with:
         </h2>

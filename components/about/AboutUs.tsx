@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import WeBeganWith from "./WeBeganWith";
+import MissionAndVision from "../MissionAndVision";
 
 function AboutUs() {
   return (
@@ -649,6 +650,7 @@ function AboutUs() {
           </div>
         </div>
         <WeBeganWith/>
+        <MissionAndVision/>
       </div>
     </section>
     // Services Section End
