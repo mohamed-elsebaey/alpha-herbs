@@ -7,6 +7,7 @@ import Video from "@/components/Video";
 import Stats from "@/components/stats/Stats";
 import Images from "@/components/Images";
 import { Metadata } from "next";
+import Certificates from "@/components/Certificates";
 
 export const metadata: Metadata = {
   title: "Alpha Herb",
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <Video />
       <Images />
+      <Certificates/>
       <Stats />
       <Products />
       <Newsletter />
