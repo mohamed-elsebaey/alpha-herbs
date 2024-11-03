@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { products } from "./types";
+import Image from "next/image";
 
 function Products() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -69,7 +70,7 @@ export default Products;
 const ImageCard = ({ src, name }: { src: any; name: any }) => {
   return (
     <div>
-      <img className="h-auto max-w-full rounded-lg" src={src} alt={name} />
+      <Image width={350} height={350} className="h-auto max-w-full rounded-lg" src={src} alt={name}/>
     </div>
   );
 };
