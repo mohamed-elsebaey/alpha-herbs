@@ -1,4 +1,12 @@
 "use client";
+
+import basil1 from '@/public/images/product-images/BASIL/1.jpg'
+import basil2 from '@/public/images/product-images/BASIL/2.jpg'
+import basil3 from '@/public/images/product-images/BASIL/3.jpg'
+import basil4 from '@/public/images/product-images/BASIL/4.jpg'
+import basil5 from '@/public/images/product-images/BASIL/5.jpeg'
+import basil6 from '@/public/images/product-images/BASIL/6.jpg'
+import basil7 from '@/public/images/product-images/BASIL/7.jpg'
 function Products() {
   return (
     <div className="container py-[110px]">
@@ -35,6 +43,15 @@ function Products() {
         >
           Seeds
         </button>
+      </div>
+      <div className="mx-auto w-[80%] grid grid-cols-2 md:grid-cols-3 gap-4">
+        <ImageCard link={basil1.src} name=""/>
+        <ImageCard link={basil2.src} name=""/>
+        <ImageCard link={basil3.src} name=""/>
+        <ImageCard link={basil4.src} name=""/>
+        <ImageCard link={basil5.src} name=""/>
+        <ImageCard link={basil6.src} name=""/>
+        <ImageCard link={basil7.src} name=""/>
       </div>
       {/* <div className="mx-auto w-[80%] grid grid-cols-2 md:grid-cols-3 gap-4">
         <ImageCard
