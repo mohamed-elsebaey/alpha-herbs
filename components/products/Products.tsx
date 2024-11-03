@@ -54,9 +54,9 @@ function Products() {
       <div className="mx-auto w-[80%] grid grid-cols-2 md:grid-cols-3 gap-4">
         {filteredProducts.map((product) => (
           <ImageCard
+            key={product.id}
             src={product.imageUrl}
             name={product.name}
-            key={product.id}
           />
         ))}
       </div>
@@ -66,9 +66,9 @@ function Products() {
 
 export default Products;
 
-const ImageCard = ({ src, name, key }: { src: any; name: any; key: any }) => {
+const ImageCard = ({ src, name }: { src: any; name: any }) => {
   return (
-    <div key={key}>
+    <div>
       <img className="h-auto max-w-full rounded-lg" src={src} alt={name} />
     </div>
   );
