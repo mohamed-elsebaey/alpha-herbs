@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "404 | Alpha Herb",
+  title: "404",
   description: "Oops! That page can’t be found.",
 };
 

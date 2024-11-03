@@ -7,6 +7,8 @@ export default async function sitemap() {
     { url: `${baseUrl}/blog`, lastModified: new Date() },
     { url: `${baseUrl}/contact`, lastModified: new Date() },
     { url: `${baseUrl}/faq`, lastModified: new Date() },
+    { url: `${baseUrl}/our-farm`, lastModified: new Date() },
+    { url: `${baseUrl}/products`, lastModified: new Date() },
     { url: `${baseUrl}/profile`, lastModified: new Date() },
     { url: `${baseUrl}/sign-in`, lastModified: new Date() },
     { url: `${baseUrl}/sign-up`, lastModified: new Date() },
