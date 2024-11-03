@@ -1,7 +1,7 @@
 import React from "react";
 import AutoSlides from "./AutoSlides";
 
-function Products() {
+function ProductsSection() {
   return (
     <>
       {/* <span id="companies"></span> */}
@@ -20,4 +20,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default ProductsSection;
