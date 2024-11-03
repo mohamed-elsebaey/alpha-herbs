@@ -3,7 +3,7 @@ import  Products  from "@/components/products/Products";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Farms",
+  title: "Products",
   description: "......",
   alternates: {
     canonical: "https://www.alpha-herbs.com/products",
