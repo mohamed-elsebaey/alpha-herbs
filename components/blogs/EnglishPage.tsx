@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllBlogs } from "@/db";
 import AuthorSection from "./card/AuthorSection";
 import LikesSection from "./card/LikesSection";
+import Image from "next/image";
 
 async function EnglishPage() {
   const blogs: any = await getAllBlogs();
@@ -33,9 +34,12 @@ async function EnglishPage() {
             key={blog.id}
           >
             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={`/images/medicinal-plants/${blog["image-path"]}`}
                 alt="card-image"
+                loading="lazy"
               />
             </div>
             <div className="p-4">
@@ -76,7 +80,7 @@ async function EnglishPage() {
                   </span>
                 </div>
               </div>
-              <LikesSection id={blog.id}/>
+              <LikesSection id={blog.id} />
             </div>
           </div>
         ))}

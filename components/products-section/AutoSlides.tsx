@@ -149,7 +149,14 @@ export default function AutoSlides() {
               className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl  bg-white relative"
             >
               <div className="mb-4">
-                <img src={data.img} alt="" className="rounded-md w-40 h-40" />
+                <Image
+                  src={data.img}
+                  alt=""
+                  className="rounded-md w-40 h-40"
+                  width={350}
+                  height={350}
+                  loading="lazy"
+                />
               </div>
               {/* content section */}
               <div className="flex flex-col items-center gap-4">

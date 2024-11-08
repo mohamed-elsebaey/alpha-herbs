@@ -35,6 +35,7 @@ function ArabicPage() {
                 src="/images/medicinal-plants/mint.jpeg"
                 alt="نبات النعناع"
                 className="w-full"
+                loading="lazy"
               />
             </div>
             <div>
@@ -65,6 +66,7 @@ function ArabicPage() {
                 src="/images/medicinal-plants/basil.jpg"
                 alt="نبات الريحان"
                 className="w-full"
+                loading="lazy"
               />
             </div>
             <div>
@@ -95,6 +97,7 @@ function ArabicPage() {
                 src="/images/medicinal-plants/dill.jpg"
                 alt="نبات الشبت"
                 className="w-full"
+                loading="lazy"
               />
             </div>
             <div>
@@ -125,6 +128,7 @@ function ArabicPage() {
                 src="/images/medicinal-plants/chamomile.jpeg"
                 alt="نبات البابونج"
                 className="w-full"
+                loading="lazy"
               />
             </div>
             <div>

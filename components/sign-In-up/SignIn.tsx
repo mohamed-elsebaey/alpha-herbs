@@ -54,7 +54,7 @@ function SignIn() {
                   href="/"
                   className="flex flex-col items-center justify-center gap-2 text-primary font-mono"
                 >
-                  <Image src={logo} alt="Alpha Herb" width={35} />
+                  <Image src={logo} alt="Alpha Herb" width={35} loading="lazy"/>
                   <span className="self-center text-2xl font-bold whitespace-nowrap">
                     Alpha Herb
                   </span>

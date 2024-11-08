@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 function Hero() {
@@ -25,10 +26,13 @@ function Hero() {
         <div className="w-full px-2 lg:w-6/12 hidden lg:block">
           <div className="lg:ml-auto lg:text-right">
             <div className="relative z-10 inline-block pt-11 lg:pt-0">
-              <img
+              <Image
+                width={700}
+                height={700}
                 src="https://img1.wsimg.com/isteam/stock/14366/:/rs=w:1920,m"
                 alt="hero"
                 className="max-w-full lg:ml-auto rounded-lg rounded-tl-[100px]"
+                loading="lazy"
               />
               <span className="absolute -bottom-8 -left-8 z-[-1]">
                 <svg

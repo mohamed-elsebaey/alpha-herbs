@@ -14,6 +14,7 @@ function Images() {
                 src="/images/imageGallery/1.jpeg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
+                loading="lazy"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
@@ -23,6 +24,7 @@ function Images() {
                 src="/images/imageGallery/2.jpeg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg  object-cover object-center"
+                loading="lazy"
               />
             </div>
             <div className="w-full p-1 md:p-2">
@@ -32,6 +34,7 @@ function Images() {
                 src="/images/imageGallery/3.jpg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg rounded-bl-[100px] object-cover object-center"
+                loading="lazy"
               />
             </div>
           </div>
@@ -44,6 +47,7 @@ function Images() {
                 src="/images/imageGallery/4.jpg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg rounded-tr-[100px] object-cover object-center"
+                loading="lazy"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
@@ -53,6 +57,7 @@ function Images() {
                 src="/images/imageGallery/5.jpg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
+                loading="lazy"
               />
             </div>
             <div className="w-1/2 p-1 md:p-2">
@@ -62,6 +67,7 @@ function Images() {
                 src="/images/imageGallery/6.jpeg"
                 alt="gallery"
                 className="block h-full w-full rounded-lg object-cover object-center"
+                loading="lazy"
               />
             </div>
           </div>

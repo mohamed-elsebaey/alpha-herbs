@@ -3,6 +3,7 @@ import React from "react";
 import ISO9001 from "@/public/certificates/ISO-9001.png";
 import ISO22000 from "@/public/certificates/ISO-22000.png";
 import ORGANIC from "@/public/certificates/ORGANIC.png";
+import Image from "next/image";
 
 function Certificates() {
   return (
@@ -27,13 +28,13 @@ function Certificates() {
           <div className="w-full max-w-full py-6 lg:w-2/3 lg:flex-none lg:px-8 lg:py-0">
             <div className="flex flex-wrap justify-around items-center">
               <div className="w-36">
-                <img src={ORGANIC.src} alt="" className="" />
+                <Image src={ORGANIC.src} alt="" className="" width={350} height={350} />
               </div>
               <div className="w-24">
-                <img src={ISO9001.src} alt="" className="" />
+                <Image src={ISO9001.src} alt="" className="" width={350} height={350} />
               </div>
               <div className="w-36">
-                <img src={ISO22000.src} alt="" className="" />
+                <Image src={ISO22000.src} alt="" className="" width={350} height={350} />
               </div>
             </div>
           </div>

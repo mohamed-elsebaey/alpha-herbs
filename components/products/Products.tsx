@@ -70,7 +70,7 @@ export default Products;
 const ImageCard = ({ src, name }: { src: any; name: any }) => {
   return (
     <div>
-      <Image width={350} height={350} className="h-auto max-w-full rounded-lg" src={src} alt={name}/>
+      <Image width={350} height={350} className="h-auto max-w-full rounded-lg" src={src} alt={name} loading="lazy"/>
     </div>
   );
 };

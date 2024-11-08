@@ -1,9 +1,12 @@
 import { grtAllUserCommentsWithTheirNamesAndProfilePicturePathByBlogId } from "@/db";
 import CommentForm from "./CommentForm";
+import Image from "next/image";
 
-async function CommentsSection({articleId}:{articleId:any}) {
+async function CommentsSection({ articleId }: { articleId: any }) {
   const allCommentsData =
-    await grtAllUserCommentsWithTheirNamesAndProfilePicturePathByBlogId(articleId);
+    await grtAllUserCommentsWithTheirNamesAndProfilePicturePathByBlogId(
+      articleId
+    );
   return (
     <>
       <section className="bg-white py-8 lg:py-16">
@@ -16,17 +19,25 @@ async function CommentsSection({articleId}:{articleId:any}) {
           <CommentForm />
           {/* Users Comments Start */}
           {allCommentsData.map((userComment: any) => (
-            <div className="p-6 mb-3 text-base bg-white border-t " key={userComment.id}>
+            <div
+              className="p-6 mb-3 text-base bg-white border-t "
+              key={userComment.id}
+            >
               <div className="flex justify-between items-center mb-2">
                 <div className="flex items-center">
-                  <p className="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold">
-                    <img
-                      className="mr-2 w-6 h-6 rounded-full"
-                      src={userComment.profilePath}
-                      alt={userComment.name}
-                    />
+                  <div className="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold">
+                    <div className="mr-2 w-7 h-7 overflow-hidden rounded-full">
+                      <Image
+                        width={500}
+                        height={500}
+                        src={userComment.profilePath}
+                        className=" h-full w-full object-cover object-center"
+                        alt={userComment.name}
+                        loading="lazy"
+                      />
+                    </div>
                     {userComment.name}
-                  </p>
+                  </div>
                   <p className="text-sm text-gray-600">
                     {userComment.created_at.toLocaleDateString("en-US", {
                       month: "short",
@@ -71,9 +82,7 @@ async function CommentsSection({articleId}:{articleId:any}) {
               </div> */}
               </div>
               {/* <!-- Dropdown menu End --> */}
-              <p className="text-gray-500">
-                {userComment.comment}
-              </p>
+              <p className="text-gray-500">{userComment.comment}</p>
               <div className="flex items-center mt-4 space-x-4">
                 {/* <button
                   type="button"

@@ -93,6 +93,7 @@ function OurFarms() {
           height="425"
           className="bg-white"
           allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          loading="lazy"
           // undefined
           // allowfullscreen
           // frameborder="0"

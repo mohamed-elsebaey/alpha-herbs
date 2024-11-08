@@ -20,6 +20,7 @@ function AboutUs() {
                     src="/images/about/image1.jpg"
                     alt=""
                     className="w-full rounded-2xl"
+                    loading="lazy"
                   />
                 </div>
                 <div className="py-3 sm:py-4">
@@ -29,6 +30,7 @@ function AboutUs() {
                     src="/images/about/image2.jpg"
                     alt=""
                     className="w-full rounded-2xl"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -40,6 +42,7 @@ function AboutUs() {
                     src="/images/about/image3.jpg"
                     alt=""
                     className="w-full rounded-2xl"
+                    loading="lazy"
                   />
                   <span className="absolute -bottom-7 -left-7 z-[-1]">
                     <svg
@@ -649,8 +652,8 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <WeBeganWith/>
-        <MissionAndVision/>
+        <WeBeganWith />
+        <MissionAndVision />
       </div>
     </section>
     // Services Section End

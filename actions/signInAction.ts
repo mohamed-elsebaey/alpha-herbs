@@ -13,9 +13,9 @@ export async function signInFormAction(prevState: any, formData: FormData) {
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errors.email = "* Invalid Email";
   }
-//   else if (password.length < 8) {
-//     errors.password = "* Invalid Password"; // Clearer message
-//   }
+  // else if (password.length < 8) {
+  //   errors.password = "* Invalid Password"; // Clearer message
+  // }
 
   if (Object.keys(errors).length > 0) {
     return { errors };

@@ -85,6 +85,7 @@ function Stats() {
           src="/images/stats/background-shape.svg"
           alt="graphic"
           className="h-full w-full"
+          loading="lazy"
         />
       </div>
     </section>

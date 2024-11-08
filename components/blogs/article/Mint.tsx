@@ -14,6 +14,7 @@ function Mint() {
           src="/images/medicinal-plants/mint1.jpg"
           alt="Image of fresh mint"
           className="rounded-lg shadow-lg"
+          loading="lazy"
         />
       </div>
       <p className="text-lg text-gray-700 mb-16 text-center">
@@ -65,6 +66,7 @@ function Mint() {
           src="/images/medicinal-plants/mint-tea.png"
           alt="Image of mint tea"
           className="rounded-lg shadow-lg"
+          loading="lazy"
         />
         <Image
           width={250}
@@ -72,6 +74,7 @@ function Mint() {
           src="/images/medicinal-plants/mint2.png"
           alt="Image of mint tea"
           className="rounded-lg shadow-lg"
+          loading="lazy"
         />
         <Image
           width={250}
@@ -79,6 +82,7 @@ function Mint() {
           src="/images/medicinal-plants/mint-oil.png"
           alt="Image of mint tea"
           className="rounded-lg shadow-lg"
+          loading="lazy"
         />
         <Image
           width={250}
@@ -86,6 +90,7 @@ function Mint() {
           src="/images/medicinal-plants/mint3.png"
           alt="Image of mint tea"
           className="rounded-lg shadow-lg"
+          loading="lazy"
         />
       </div>
 
@@ -121,6 +126,7 @@ function Mint() {
           src="/images/medicinal-plants/mint.jpeg"
           alt="Image of fresh mint leaves"
           className="rounded-lg shadow-lg"
+          loading="lazy"
         />
         <Image
           width={350}
@@ -128,6 +134,7 @@ function Mint() {
           src="/images/imageGallery/7.jpg"
           alt="Image of fresh mint leaves"
           className="rounded-lg shadow-lg hidden sm:block"
+          loading="lazy"
         />
         <Image
           width={350}
@@ -135,6 +142,7 @@ function Mint() {
           src="/images/imageGallery/1.jpeg"
           alt="Image of fresh mint leaves"
           className="rounded-lg shadow-lg hidden md:block"
+          loading="lazy"
         />
       </div>
 

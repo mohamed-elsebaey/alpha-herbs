@@ -34,7 +34,7 @@ function Header({
             className="flex items-center gap-2 text-primary font-mono"
             onClick={closeMenueHandler}
           >
-            <Image src={logo} alt="Alpha Herb" width={25} />
+            <Image src={logo} alt="Alpha Herb" width={25} loading="lazy" />
             <span className="self-center text-2xl font-bold whitespace-nowrap">
               Alpha Herb
             </span>
