@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { getAllBlogs } from "@/db";
+import { getAllBlogs } from "@/db/db";
 import AuthorSection from "./card/AuthorSection";
 import LikesSection from "./card/LikesSection";
 import Image from "next/image";

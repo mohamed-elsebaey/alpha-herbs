@@ -1,4 +1,4 @@
-import { getAuthorDataById } from "@/db";
+import { getAuthorDataById } from "@/db/db";
 import Image from "next/image";
 
 async function AuthorSection({ id }: { id: any }) {

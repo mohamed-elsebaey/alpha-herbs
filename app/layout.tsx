@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/header/Header";
 import Template from "./template";
 import { Accessibility } from "@/components/Accessibility";
-import { getUserDataFromDB } from "@/db";
+import { getUserDataFromDB } from "@/db/db";
 
 export const metadata: Metadata = {
   metadataBase : new URL("https://www.alpha-herbs.com/"),

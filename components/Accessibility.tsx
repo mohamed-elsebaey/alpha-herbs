@@ -1,5 +1,5 @@
 "use server";
-import { getSession } from "@/lib";
+import { getSession } from "@/lib/lib";
 
 export async function Accessibility() {
   const session = await getSession();

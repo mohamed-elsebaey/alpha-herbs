@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo/logo.svg";
 
-import { getSession, addUserSessions } from "@/lib";
+import { getSession, addUserSessions } from "@/lib/lib";
 import { useFormStatus } from "react-dom";
 
 import { signInFormAction } from "@/actions/signInAction";

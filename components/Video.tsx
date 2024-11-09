@@ -407,7 +407,7 @@ const Video = () => {
               initial={{ y: 150, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.75 }}
-              className=" bg-transparent mx-auto w-full h-full max-h-[250px] sm:max-h-[350px] md:max-h-[400px] lg:max-h-[550px] max-w-[80%] sm:max-w-[70%]"
+              // className="bg-transparent mx-auto w-full h-full max-h-[250px] sm:max-h-[350px] md:max-h-[400px] lg:max-h-[550px] max-w-[80%] sm:max-w-[70%]"
             >
               <iframe id="video" className="h-full w-full" src={videoSrc} />
             </motion.div>

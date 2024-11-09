@@ -1,4 +1,4 @@
-import { grtAllUserCommentsWithTheirNamesAndProfilePicturePathByBlogId } from "@/db";
+import { grtAllUserCommentsWithTheirNamesAndProfilePicturePathByBlogId } from "@/db/db";
 import CommentForm from "./CommentForm";
 import Image from "next/image";
 

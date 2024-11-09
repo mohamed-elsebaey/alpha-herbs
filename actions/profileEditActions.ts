@@ -1,7 +1,7 @@
 "use server";
 import { redirect } from "next/navigation";
-import { uploadImage } from "@/cloudinary";
-import { updateUserProfileData } from "@/db";
+import { uploadImage } from "@/lib/cloudinary";
+import { updateUserProfileData } from "@/db/db";
 import { revalidatePath } from "next/cache";
 
 export async function profileEditActions(prevState: any, formData: FormData) {

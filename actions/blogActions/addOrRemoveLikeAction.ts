@@ -1,7 +1,7 @@
 "use server";
 
 import { Accessibility } from "@/components/Accessibility";
-import { getArticleLikeStateByUserIdArticleId, getUserIdByEmail } from "@/db";
+import { getArticleLikeStateByUserIdArticleId, getUserIdByEmail } from "@/db/db";
 import { revalidatePath } from "next/cache";
 
 export async function addOrRemoveLikeAction(articleId: any) {

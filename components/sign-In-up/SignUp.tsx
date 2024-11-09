@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useFormStatus } from "react-dom";
 
 import logo from "@/public/logo/logo.svg";
-// import { getSession, login } from "@/lib";
+// import { getSession, login } from "@/lib/lib";
 import { signUpFormAction } from "@/actions/signUpAction";
 import { useActionState, useEffect, useState } from "react";
 

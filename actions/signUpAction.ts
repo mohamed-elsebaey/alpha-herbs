@@ -1,8 +1,8 @@
 "use server";
 
-import { addNowUser } from "@/db";
-import { addUserSessions } from "@/lib";
-import { sendMail } from "@/mail";
+import { addNowUser } from "@/db/db";
+import { addUserSessions } from "@/lib/lib";
+import { sendMail } from "@/lib/mail";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 

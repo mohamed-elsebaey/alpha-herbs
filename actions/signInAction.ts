@@ -1,6 +1,6 @@
 "use server";
-import { userDataAuthentication } from "@/db";
-import { addUserSessions } from "@/lib";
+import { userDataAuthentication } from "@/db/db";
+import { addUserSessions } from "@/lib/lib";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 

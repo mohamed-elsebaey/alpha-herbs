@@ -1,4 +1,4 @@
-import { getAllCommentsOnArticleByBlogId, getNamesOfThoseWhoLikedTheArticleByBlogId } from "@/db";
+import { getAllCommentsOnArticleByBlogId, getNamesOfThoseWhoLikedTheArticleByBlogId } from "@/db/db";
 import { Accessibility } from "../../Accessibility";
 import HeartButton from "./HeartButton";
 

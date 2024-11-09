@@ -1,6 +1,6 @@
 import { Accessibility } from "@/components/Accessibility";
 import Profile from "@/components/profile/Profile";
-import { getUserDataFromDB } from "@/db";
+import { getUserDataFromDB } from "@/db/db";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 

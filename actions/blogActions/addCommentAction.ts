@@ -1,7 +1,7 @@
 "use server";
 
 import { Accessibility } from "@/components/Accessibility";
-import { addUserCommentToArticleByUserIdArticleId, getUserIdByEmail } from "@/db";
+import { addUserCommentToArticleByUserIdArticleId, getUserIdByEmail } from "@/db/db";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
