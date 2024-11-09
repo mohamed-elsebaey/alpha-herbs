@@ -3,12 +3,13 @@ import CommentsSection from "@/components/blogs/comments/CommentsSection";
 import React from "react";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
+export async function generateMetadata(props: BlogPostPageProps) {
+  const params = await props.params;
   return {
     title: params.slug,
     description:
@@ -21,7 +22,8 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   };
 }
 
-function BlogPostPage({ params }: BlogPostPageProps) {
+async function BlogPostPage(props: BlogPostPageProps) {
+  const params = await props.params;
   let articleId = 0;
   let data = (
     <>

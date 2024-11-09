@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 export default function ProfileAvatar({ imagePath }: { imagePath: String }) {
   const [pickedImage, setPickedImage] = useState<any>(imagePath);
 
-  const imageInput = useRef<any>();
+  const imageInput = useRef<any>(undefined);
 
   function handlePickClick() {
     imageInput.current.click();

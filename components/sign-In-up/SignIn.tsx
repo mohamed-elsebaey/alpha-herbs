@@ -4,10 +4,10 @@ import Image from "next/image";
 import logo from "@/public/logo/logo.svg";
 
 import { getSession, addUserSessions } from "@/lib";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 import { signInFormAction } from "@/actions/signInAction";
-import { useEffect, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 const initialStat = {
   errors: {
@@ -31,7 +31,7 @@ function SubmitButton() {
 }
 
 function SignIn() {
-  const [formState, formAction] = useFormState(signInFormAction, initialStat);
+  const [formState, formAction] = useActionState(signInFormAction, initialStat);
   const [formStateType, setFormStateType] = useState<any>({});
 
   useEffect(() => {

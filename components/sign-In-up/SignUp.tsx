@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 import logo from "@/public/logo/logo.svg";
 // import { getSession, login } from "@/lib";
 import { signUpFormAction } from "@/actions/signUpAction";
-import { useEffect, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 const initialStat = {
   errors: {
@@ -32,7 +32,7 @@ function SubmitButton() {
 }
 
 function SignUp() {
-  const [formState, formAction] = useFormState(signUpFormAction, initialStat);
+  const [formState, formAction] = useActionState(signUpFormAction, initialStat);
   const [formStateType, setFormStateType] = useState<any>({});
 
   useEffect(() => {

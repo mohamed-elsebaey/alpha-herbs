@@ -1,5 +1,4 @@
 // "use client";
-import React, { useState, useEffect } from "react";
 import EnglishPage from "./EnglishPage";
 // import ArabicPage from "./ArabicPage";
 

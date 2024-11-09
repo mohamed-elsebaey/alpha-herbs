@@ -1,7 +1,8 @@
 "use client";
+import { useActionState } from "react";
 
 import { addCommentAction } from "@/actions/blogActions/addCommentAction";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 function PostCommentButton() {
   const { pending } = useFormStatus();
@@ -19,7 +20,7 @@ function PostCommentButton() {
 
 function CommentForm() {
   const blogId = 1;
-  const [formState, formAction] = useFormState(addCommentAction, null);
+  const [formState, formAction] = useActionState(addCommentAction, null);
 
   return (
     <form className="mb-6" action={formAction}>

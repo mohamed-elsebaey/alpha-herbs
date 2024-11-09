@@ -1,6 +1,6 @@
 "use client";
-import { useFormState, useFormStatus } from "react-dom";
-import { useState } from "react";
+import { useFormStatus } from "react-dom";
+import { useActionState, useState } from "react";
 
 import { profileEditActions } from "@/actions/profileEditActions";
 import ProfileAvatar from "./ProfileAvatar";
@@ -20,7 +20,7 @@ function SubmitButton() {
 }
 
 function Profile({ userData }: { userData: any }) {
-  const [formState, formAction] = useFormState(profileEditActions, {});
+  const [formState, formAction] = useActionState(profileEditActions, {});
 
   const names = userData.name.split(" ");
   let first_name = names[0] || "";
